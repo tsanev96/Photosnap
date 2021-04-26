@@ -24,11 +24,11 @@
     line-height: normal;
   }
 
-  &__dark-theme {
+  &__dark {
     color: var(--primary-color);
   }
 
-  &__light-theme {
+  &__light {
     color: var(--white-color);
   }
 }

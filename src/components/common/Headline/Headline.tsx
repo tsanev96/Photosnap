@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import "./_headline.scss";
 
 interface PropsHeadline {
   level: "h1" | "h2" | "h3" | "h4" | "h5";

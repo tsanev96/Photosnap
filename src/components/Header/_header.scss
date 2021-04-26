@@ -13,7 +13,7 @@
 
     #{$self} {
       &__headline {
-        display: flex;
+        @include verticalFlexCenter;
         text-shadow: 1px 0 var(--primary-color);
         font-weight: bold;
       }

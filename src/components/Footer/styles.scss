@@ -9,7 +9,7 @@
   text-align: center;
 
   &__headline {
-    @include horizontalFlexCenter;
+    @include flexCenter;
     margin-bottom: rem(30);
 
     #{$self} {
