@@ -1,0 +1,31 @@
+@import "../../../styles/mixins/mixins";
+@import "../../../styles/functions/pixel-to-rem";
+
+.button {
+  padding: rem(12) rem(24);
+  width: rem(158);
+  max-width: 100%;
+  font-size: rem(12);
+  transition: 0.6s;
+  border: 0;
+  outline: 0;
+  text-transform: uppercase;
+  letter-spacing: rem(2);
+  font-weight: bold;
+  font-family: "DMSans", sans-serif;
+
+  &__light {
+    background: var(--primary-color);
+    color: var(--white-color);
+  }
+
+  &__dark {
+    color: var(--primary-color);
+    background: var(--white-color);
+  }
+
+  &:hover {
+    color: var(--primary-color);
+    background: var(--light-gray-color);
+  }
+}

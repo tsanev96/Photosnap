@@ -13,18 +13,9 @@
 
     #{$self} {
       &__headline {
-        display: flex;
+        @include verticalFlexCenter;
         text-shadow: 1px 0 var(--primary-color);
         font-weight: bold;
-      }
-
-      &__triangle-icon {
-        display: inline-block;
-        margin-right: rem(8);
-        width: rem(19);
-        height: rem(16);
-        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-        background-image: linear-gradient(to top, #ffc593, #bc7198, #5a77ff);
       }
     }
   }
@@ -121,11 +112,9 @@
 
     #{$self} {
       &__invitation {
-        margin: rem(20) 0 rem(30);
-
-        a {
-          padding: rem(15);
-          width: 100%;
+        button {
+          margin: rem(20) 0 rem(30);
+          max-width: 100%;
         }
       }
     }

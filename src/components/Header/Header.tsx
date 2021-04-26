@@ -3,6 +3,9 @@ import { headerLinks } from "./headerData";
 import { Link } from "react-router-dom";
 import "./_header.scss";
 import { Line } from "../common/Line/Line";
+import { Button } from "../common/Button/Button";
+import { Headline } from "../common/Headline/Headline";
+import { ColorfulTriangle } from "../common/ColorfulTriangle/ColorfulTriangle";
 
 export const Header = () => {
   const [isHamburgerMenuOpened, setIsHamburgerMenuOpened] = useState(false);
@@ -11,8 +14,8 @@ export const Header = () => {
     <div className="header">
       <div className="header__front">
         <div className="header__headline">
-          <div className="header__triangle-icon" />
-          PHOTOSNAP
+          <ColorfulTriangle />
+          <Headline level="h3" theme="dark" text="PHOTOSNAP" />
         </div>
         <div className="header__menu-wrap">
           <div
@@ -40,7 +43,7 @@ export const Header = () => {
           </nav>
 
           <div className="header__invitation">
-            <Link to="/invitation">Get an invite</Link>
+            <Button text="get an invite" />
           </div>
         </div>
       </div>
@@ -61,7 +64,7 @@ export const Header = () => {
         </nav>
         <Line />
         <div className="header__invitation">
-          <Link to="/invitation">Get an invite</Link>
+          <Button text="get an invite" />
         </div>
       </div>
     </div>

@@ -2,11 +2,7 @@
 @import "./settings";
 @import "./reset";
 @import "./mixins/mixins";
-
-@font-face {
-  font-family: "DMSans";
-  src: url(../fonts/DMSans/DMSans-Regular.ttf) format("truetype");
-}
+@import "./fonts/fonts";
 
 html {
   font-family: "DMSans", sans-serif;

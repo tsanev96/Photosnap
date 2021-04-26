@@ -8,15 +8,17 @@ import {
   FaLongArrowAltRight,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { ColorfulTriangle } from "../common/ColorfulTriangle/ColorfulTriangle";
+import { Headline } from "../common/Headline/Headline";
 import { footerLinks } from "./footerData";
-import "./styles.scss";
+import "./_footer.scss";
 
 export const Footer: FC = () => {
   return (
     <div className="footer">
       <div className="footer__headline">
-        <div className="footer__triangle-icon" />
-        PHOTOSNAP
+        <ColorfulTriangle />
+        <Headline theme="light" level="h3" text="PHOTOSNAP" />
       </div>
       <div className="footer__socials">
         <div className="footer__social">
