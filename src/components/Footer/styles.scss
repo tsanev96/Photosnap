@@ -1,0 +1,69 @@
+@import "../../styles/mixins/mixins";
+@import "../../styles/functions/pixel-to-rem";
+
+.footer {
+  $self: &;
+  padding: 56px 60px;
+  background: var(--primary-color);
+  color: var(--white-color);
+  text-align: center;
+
+  &__headline {
+    @include horizontalFlexCenter;
+    margin-bottom: rem(30);
+
+    #{$self} {
+      &__triangle-icon {
+        display: inline-block;
+        margin-right: rem(8);
+        width: rem(19);
+        height: rem(16);
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        background-image: linear-gradient(to top, #ffc593, #bc7198, #5a77ff);
+      }
+    }
+  }
+
+  &__socials {
+    @include horizontalFlexCenter;
+    margin-bottom: rem(50);
+
+    #{$self} {
+      &__social {
+        margin-right: rem(10);
+        svg {
+          fill: var(--white-color);
+          font-size: rem(25);
+        }
+      }
+    }
+  }
+
+  &__links {
+    margin-bottom: rem(120);
+    li {
+      margin-bottom: rem(20);
+      text-transform: uppercase;
+
+      a {
+        font-size: rem(12);
+        color: var(--white-color);
+      }
+    }
+  }
+
+  &__invitation {
+    @include horizontalFlexCenter;
+    margin-bottom: rem(35);
+
+    svg {
+      margin-left: rem(15);
+    }
+  }
+
+  &__copyright {
+    margin-bottom: rem(55);
+    opacity: 0.5;
+    font-size: rem(15);
+  }
+}

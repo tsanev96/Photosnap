@@ -1,0 +1,14 @@
+@import "./functions/pixel-to-rem";
+@import "./settings";
+@import "./reset";
+@import "./mixins/mixins";
+
+@font-face {
+  font-family: "DMSans";
+  src: url(../fonts/DMSans/DMSans-Regular.ttf) format("truetype");
+}
+
+html {
+  font-family: "DMSans", sans-serif;
+  font-weight: normal;
+}

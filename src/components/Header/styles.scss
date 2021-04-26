@@ -1,0 +1,141 @@
+@import "../../styles/mixins/mixins";
+@import "../../styles/functions/pixel-to-rem";
+
+.header {
+  $self: &;
+  position: relative;
+
+  &__front {
+    padding: rem(28) rem(24);
+    @include flexCenter;
+    justify-content: space-between;
+    height: rem(70);
+
+    #{$self} {
+      &__headline {
+        display: flex;
+        text-shadow: 1px 0 var(--primary-color);
+        font-weight: bold;
+      }
+
+      &__triangle-icon {
+        display: inline-block;
+        margin-right: rem(8);
+        width: rem(19);
+        height: rem(16);
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        background-image: linear-gradient(to top, #ffc593, #bc7198, #5a77ff);
+      }
+    }
+  }
+
+  &__menu-wrap {
+    position: relative;
+
+    #{$self} {
+      &__hamburger-menu {
+        position: relative;
+        width: rem(25);
+        height: rem(25);
+        cursor: pointer;
+
+        & > * {
+          position: absolute;
+          width: 100%;
+          height: rem(2);
+          background: var(--primary-color);
+          transition: 0.5s;
+        }
+
+        &.active {
+          & *:nth-child(1) {
+            transform: rotate(45deg);
+          }
+
+          & *:nth-child(2) {
+            transform: rotate(-45deg);
+          }
+
+          & *:nth-child(1),
+          & *:nth-child(2) {
+            top: 50%;
+            left: 0;
+          }
+
+          & *:nth-child(3) {
+            transform: translateX(-50%);
+            opacity: 0;
+          }
+
+          & *:nth-child(4) {
+            transform: translateX(50%);
+            opacity: 0;
+          }
+        }
+
+        & *:nth-child(1) {
+          top: 20%;
+        }
+
+        & *:nth-child(2) {
+          top: 50%;
+        }
+
+        & *:nth-child(3),
+        & *:nth-child(4) {
+          top: 80%;
+          width: 50%;
+        }
+
+        & *:nth-child(4) {
+          right: 0;
+        }
+      }
+    }
+  }
+
+  &__links {
+    position: absolute;
+    top: rem(70);
+    padding: rem(30) rem(33) 0;
+    width: 100%;
+    transform: translateX(100%);
+    background: var(--white-color);
+    text-align: center;
+    transition: 0.6s;
+    z-index: 1;
+
+    &.active {
+      transform: translateX(0);
+    }
+
+    ul {
+      li {
+        margin-bottom: rem(20);
+
+        a {
+          font-size: rem(15);
+          font-weight: bold;
+          text-transform: uppercase;
+          color: var(--primary-color);
+        }
+      }
+    }
+
+    #{$self} {
+      &__invitation {
+        margin: rem(20) 0 rem(30);
+        padding: rem(15);
+        width: 100%;
+        background: var(--primary-color);
+
+        a {
+          color: var(--white-color);
+          text-transform: uppercase;
+          font-weight: bold;
+          letter-spacing: rem(2.5);
+        }
+      }
+    }
+  }
+}
