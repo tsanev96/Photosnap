@@ -1,3 +1,5 @@
+@import "../functions/pixel-to-rem";
+
 @mixin flexCenter {
   display: flex;
   justify-content: center;
@@ -7,4 +9,33 @@
 @mixin horizontalFlexCenter {
   display: flex;
   justify-content: center;
+}
+
+@mixin verticalFlexCenter {
+  display: flex;
+  align-items: center;
+}
+
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: rem(1920)) {
+      @content;
+    }
+  } @else if $point == laptop {
+    @media (min-width: rem(1440)) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media (min-width: rem(1024)) {
+      @content;
+    }
+  } @else if $point == phablet {
+    @media (min-width: rem(768)) {
+      @content;
+    }
+  } @else if $point == mobileonly {
+    @media (max-width: rem(375)) {
+      @content;
+    }
+  }
 }

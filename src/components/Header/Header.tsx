@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { headerLinks } from "./headerData";
 import { Link } from "react-router-dom";
-import "./styles.scss";
+import "./_header.scss";
 import { Line } from "../common/Line/Line";
 
 export const Header = () => {
@@ -27,9 +27,29 @@ export const Header = () => {
             <div />
           </div>
         </div>
+
+        <div className="header__links">
+          <nav>
+            <ul>
+              {headerLinks.map((link) => (
+                <li key={link.pathname}>
+                  <Link to={link.pathname}>{link.name}</Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <div className="header__invitation">
+            <Link to="/invitation">Get an invite</Link>
+          </div>
+        </div>
       </div>
 
-      <div className={`header__links ${isHamburgerMenuOpened ? "active" : ""}`}>
+      <div
+        className={`header__links-mobile ${
+          isHamburgerMenuOpened ? "active" : ""
+        }`}
+      >
         <nav>
           <ul>
             {headerLinks.map((link) => (
@@ -40,7 +60,7 @@ export const Header = () => {
           </ul>
         </nav>
         <Line />
-        <div className="header__invitation active">
+        <div className="header__invitation">
           <Link to="/invitation">Get an invite</Link>
         </div>
       </div>

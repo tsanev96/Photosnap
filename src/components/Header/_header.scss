@@ -32,6 +32,10 @@
   &__menu-wrap {
     position: relative;
 
+    @include breakpoint("phablet") {
+      display: none;
+    }
+
     #{$self} {
       &__hamburger-menu {
         position: relative;
@@ -94,7 +98,7 @@
     }
   }
 
-  &__links {
+  &__links-mobile {
     position: absolute;
     top: rem(70);
     padding: rem(30) rem(33) 0;
@@ -105,14 +109,32 @@
     transition: 0.6s;
     z-index: 1;
 
+    ul {
+      li {
+        margin-bottom: rem(20);
+      }
+    }
+
     &.active {
       transform: translateX(0);
     }
 
+    #{$self} {
+      &__invitation {
+        margin: rem(20) 0 rem(30);
+
+        a {
+          padding: rem(15);
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__links-mobile,
+  &__links {
     ul {
       li {
-        margin-bottom: rem(20);
-
         a {
           font-size: rem(15);
           font-weight: bold;
@@ -124,16 +146,45 @@
 
     #{$self} {
       &__invitation {
-        margin: rem(20) 0 rem(30);
-        padding: rem(15);
-        width: 100%;
-        background: var(--primary-color);
-
         a {
+          background: var(--primary-color);
           color: var(--white-color);
           text-transform: uppercase;
           font-weight: bold;
-          letter-spacing: rem(2.5);
+          letter-spacing: rem(2);
+        }
+      }
+    }
+  }
+
+  &__links {
+    @include verticalFlexCenter;
+    display: none;
+
+    @include breakpoint("phablet") {
+      display: flex;
+    }
+
+    nav {
+      ul {
+        display: flex;
+
+        li {
+          margin-right: rem(35);
+
+          a {
+            font-size: rem(12);
+            letter-spacing: rem(2);
+          }
+        }
+      }
+    }
+
+    #{$self} {
+      &__invitation {
+        a {
+          padding: rem(12) rem(24);
+          font-size: rem(12);
         }
       }
     }
