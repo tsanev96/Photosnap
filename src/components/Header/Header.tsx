@@ -3,6 +3,7 @@ import { headerLinks } from "./headerData";
 import { Link } from "react-router-dom";
 import "./_header.scss";
 import { Line } from "../common/Line/Line";
+import { Button } from "../common/Button/Button";
 
 export const Header = () => {
   const [isHamburgerMenuOpened, setIsHamburgerMenuOpened] = useState(false);
@@ -40,7 +41,7 @@ export const Header = () => {
           </nav>
 
           <div className="header__invitation">
-            <Link to="/invitation">Get an invite</Link>
+            <Button text="get an invite" />
           </div>
         </div>
       </div>
@@ -61,7 +62,7 @@ export const Header = () => {
         </nav>
         <Line />
         <div className="header__invitation">
-          <Link to="/invitation">Get an invite</Link>
+          <Button text="get an invite" />
         </div>
       </div>
     </div>

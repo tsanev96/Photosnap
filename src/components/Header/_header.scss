@@ -121,11 +121,9 @@
 
     #{$self} {
       &__invitation {
-        margin: rem(20) 0 rem(30);
-
-        a {
-          padding: rem(15);
-          width: 100%;
+        button {
+          margin: rem(20) 0 rem(30);
+          max-width: 100%;
         }
       }
     }
