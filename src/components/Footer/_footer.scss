@@ -11,17 +11,6 @@
   &__headline {
     @include flexCenter;
     margin-bottom: rem(30);
-
-    #{$self} {
-      &__triangle-icon {
-        display: inline-block;
-        margin-right: rem(8);
-        width: rem(19);
-        height: rem(16);
-        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-        background-image: linear-gradient(to top, #ffc593, #bc7198, #5a77ff);
-      }
-    }
   }
 
   &__socials {

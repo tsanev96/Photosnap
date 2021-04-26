@@ -5,6 +5,7 @@ import "./_header.scss";
 import { Line } from "../common/Line/Line";
 import { Button } from "../common/Button/Button";
 import { Headline } from "../common/Headline/Headline";
+import { ColorfulTriangle } from "../common/ColorfulTriangle/ColorfulTriangle";
 
 export const Header = () => {
   const [isHamburgerMenuOpened, setIsHamburgerMenuOpened] = useState(false);
@@ -13,7 +14,7 @@ export const Header = () => {
     <div className="header">
       <div className="header__front">
         <div className="header__headline">
-          <div className="header__triangle-icon" />
+          <ColorfulTriangle />
           <Headline level="h3" theme="dark" text="PHOTOSNAP" />
         </div>
         <div className="header__menu-wrap">
