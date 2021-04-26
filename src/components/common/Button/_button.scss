@@ -6,15 +6,23 @@
   width: rem(158);
   max-width: 100%;
   font-size: rem(12);
-  background: var(--primary-color);
-  color: var(--white-color);
-  transition: 0.4s;
+  transition: 0.6s;
   border: 0;
   outline: 0;
   text-transform: uppercase;
   letter-spacing: rem(2);
   font-weight: bold;
   font-family: "DMSans", sans-serif;
+
+  &__light {
+    background: var(--primary-color);
+    color: var(--white-color);
+  }
+
+  &__dark {
+    color: var(--primary-color);
+    background: var(--white-color);
+  }
 
   &:hover {
     color: var(--primary-color);
