@@ -36,9 +36,9 @@ export const imageTextData: ImageContent[] = [
   },
   {
     image: {
-      mobile: contentImages.image2.mobile,
-      tablet: contentImages.image2.tablet,
-      desktop: contentImages.image2.desktop,
+      mobile: contentImages.image3.mobile,
+      tablet: contentImages.image3.tablet,
+      desktop: contentImages.image3.desktop,
       alt: "",
     },
     headline: "DESIGNED FOR EVERYONE",
