@@ -1,0 +1,13 @@
+.copy {
+  &__dark {
+    color: var(--primary-color);
+  }
+
+  &__light {
+    color: var(--white-color);
+  }
+
+  &__opacity-true {
+    opacity: 0.6;
+  }
+}

@@ -1,26 +1,31 @@
 import React from "react";
-import { ImageText } from "../common/ImageText/ImageText";
-import img1 from "../../images/home/mobile/create-and-share.jpg";
+import { ImageContent } from "../common/ImageText/ImageContent";
 import { InfoText } from "../common/InfoText/InfoText";
+import { imageTextData } from "./homeData";
 
 export const Home = () => {
   return (
-    <>
-      <ImageText image={{ mobile: img1, tablet: img1, desktop: img1, alt: "" }}>
-        <InfoText
-          headline="some headline"
-          copy="some copy"
-          button={{ text: "click me" }}
-        />
-      </ImageText>
-      <ImageText image={{ mobile: img1, tablet: img1, desktop: img1, alt: "" }}>
-        <InfoText
-          headline="some headline"
-          copy="some copy"
-          button={{ text: "click me" }}
-          theme="light"
-        />
-      </ImageText>
-    </>
+    <div className="home">
+      {imageTextData.map(
+        ({ headline, copy, button, image, theme, isRowReversed }) => (
+          <ImageContent
+            image={{
+              mobile: image.mobile,
+              tablet: image.tablet,
+              desktop: image.desktop,
+              alt: image.alt,
+            }}
+            isRowReversed={isRowReversed}
+          >
+            <InfoText
+              headline={headline}
+              copy={copy}
+              button={{ text: button.text }}
+              isOpacity
+            />
+          </ImageContent>
+        )
+      )}
+    </div>
   );
 };

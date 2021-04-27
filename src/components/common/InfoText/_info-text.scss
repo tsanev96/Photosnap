@@ -3,9 +3,14 @@
 
 .info-text {
   padding: rem(70) rem(20) rem(70) rem(30);
+  height: 100%;
+
+  @include breakpoint("phablet") {
+    padding: rem(170) rem(54);
+  }
 
   .headline {
-    margin-bottom: rem(16);
+    margin-bottom: rem(20);
   }
 
   .copy {
