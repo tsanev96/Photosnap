@@ -7,6 +7,10 @@
   flex-direction: column;
   text-align: center;
 
+  @include breakpoint("laptop") {
+    margin-bottom: rem(40);
+  }
+
   &__icon {
     margin-bottom: rem(35);
     svg {
