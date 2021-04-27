@@ -19,10 +19,15 @@
 
     #{$self} {
       &__social {
-        margin-right: rem(10);
+        margin-right: rem(15);
         svg {
           fill: var(--white-color);
           font-size: rem(25);
+          transition: 0.4s;
+
+          &:hover {
+            fill: #9c9b9b;
+          }
         }
       }
     }
@@ -36,6 +41,8 @@
 
       a {
         font-size: rem(12);
+        font-weight: bold;
+        letter-spacing: rem(1);
         color: var(--white-color);
       }
     }
