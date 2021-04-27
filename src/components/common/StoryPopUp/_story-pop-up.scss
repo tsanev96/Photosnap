@@ -29,6 +29,14 @@
       width: 85%;
     }
 
+    @include breakpoint("tablet") {
+      width: 60%;
+    }
+
+    @include breakpoint("laptop") {
+      width: 40%;
+    }
+
     #{$self} {
       &__close {
         @include flexCenter;
