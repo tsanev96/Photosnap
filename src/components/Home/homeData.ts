@@ -1,13 +1,12 @@
 import { ImageContent } from "../../types/interfaces/imageContent";
-import { imagesContent } from "./homeImages";
+import { contentImages, storyImages } from "./homeImages";
 
-import storyImageOne from "../../images/home/desktop/designed-for-everyone.jpg";
 export const imageTextData: ImageContent[] = [
   {
     image: {
-      mobile: imagesContent.image1.mobile,
-      tablet: imagesContent.image1.tablet,
-      desktop: imagesContent.image1.desktop,
+      mobile: contentImages.image1.mobile,
+      tablet: contentImages.image1.tablet,
+      desktop: contentImages.image1.desktop,
       alt: "",
     },
     headline: "Create and share your photo stories.",
@@ -21,9 +20,9 @@ export const imageTextData: ImageContent[] = [
   },
   {
     image: {
-      mobile: imagesContent.image2.mobile,
-      tablet: imagesContent.image2.tablet,
-      desktop: imagesContent.image2.desktop,
+      mobile: contentImages.image2.mobile,
+      tablet: contentImages.image2.tablet,
+      desktop: contentImages.image2.desktop,
       alt: "",
     },
     headline: "BEAUTIFUL STORIES EVERY TIME",
@@ -37,9 +36,9 @@ export const imageTextData: ImageContent[] = [
   },
   {
     image: {
-      mobile: imagesContent.image2.mobile,
-      tablet: imagesContent.image2.tablet,
-      desktop: imagesContent.image2.desktop,
+      mobile: contentImages.image2.mobile,
+      tablet: contentImages.image2.tablet,
+      desktop: contentImages.image2.desktop,
       alt: "",
     },
     headline: "DESIGNED FOR EVERYONE",
@@ -53,29 +52,45 @@ export const imageTextData: ImageContent[] = [
   },
 ];
 
-export const cards = [
+export const storiesData = [
   {
     headline: "The Mountains",
     copy: "by John Appleseed",
     buttonText: "READ STORY",
-    image: {},
+    image: {
+      mobile: storyImages.image1.mobile,
+      desktop: storyImages.image1.desktop,
+      alt: storyImages.image1.alt,
+    },
   },
   {
     headline: "Sunset Cityscapes",
     copy: "by Benjamin Cruz",
     buttonText: "READ STORY",
-    image: {},
+    image: {
+      mobile: storyImages.image2.mobile,
+      desktop: storyImages.image2.desktop,
+      alt: storyImages.image2.alt,
+    },
   },
   {
     headline: "18 Days Voyage",
     copy: "by Alexei Borodin",
     buttonText: "READ STORY",
-    image: {},
+    image: {
+      mobile: storyImages.image3.mobile,
+      desktop: storyImages.image3.desktop,
+      alt: storyImages.image3.alt,
+    },
   },
   {
     headline: "Architecturals",
     copy: "by Samantha Brooke",
     buttonText: "READ STORY",
-    image: {},
+    image: {
+      mobile: storyImages.image4.mobile,
+      desktop: storyImages.image4.desktop,
+      alt: storyImages.image4.alt,
+    },
   },
 ];

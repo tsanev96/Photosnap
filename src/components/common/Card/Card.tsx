@@ -8,15 +8,21 @@ import "./_card.scss";
 interface PropsCard {
   headline: string;
   copy: string;
+  image: {
+    mobile: string;
+    desktop: string;
+    alt: string;
+  };
 }
 
-export const Card: FC<PropsCard> = ({ headline, copy }) => {
+export const Card: FC<PropsCard> = ({ headline, copy, image }) => {
   return (
     <div className="card">
       <Headline level="h4" text={headline} theme="light" />
       <Copy text={copy} theme="light" />
       <Line />
       <ButtonArrow isSpaceBetween text="read story" theme="light" />
+      <img src={image.mobile} alt="" />
     </div>
   );
 };

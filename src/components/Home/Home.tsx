@@ -2,7 +2,8 @@ import React from "react";
 import { Card } from "../common/Card/Card";
 import { ImageContent } from "../common/ImageText/ImageContent";
 import { InfoText } from "../common/InfoText/InfoText";
-import { imageTextData } from "./homeData";
+import { Stories } from "../common/Stories/Stories";
+import { imageTextData, storiesData } from "./homeData";
 
 export const Home = () => {
   return (
@@ -28,7 +29,20 @@ export const Home = () => {
           </ImageContent>
         )
       )}
-      <Card headline="headline card" copy="copy text" />
+      <Stories>
+        {storiesData.map(({ headline, copy, image }) => (
+          <Card
+            key={headline}
+            headline={headline}
+            copy={copy}
+            image={{
+              mobile: image.mobile,
+              desktop: image.mobile,
+              alt: image.alt,
+            }}
+          />
+        ))}
+      </Stories>
     </div>
   );
 };
