@@ -43,7 +43,7 @@ export const Header = () => {
           </nav>
 
           <div className="header__invitation">
-            <Button text="get an invite" />
+            <Button text="get an invite" theme="light" />
           </div>
         </div>
       </div>

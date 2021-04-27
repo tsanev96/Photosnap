@@ -1,0 +1,6 @@
+@import "../../../styles/mixins/mixins";
+@import "../../../styles/functions/pixel-to-rem";
+
+.button-arrow {
+  @include flexCenter;
+}

@@ -2,6 +2,7 @@
 @import "../../../styles/functions/pixel-to-rem";
 
 .button {
+  $self: &;
   padding: rem(12) rem(24);
   width: rem(158);
   max-width: 100%;
@@ -14,18 +15,37 @@
   font-weight: bold;
   font-family: "DMSans", sans-serif;
 
-  &__light {
-    background: var(--primary-color);
-    color: var(--white-color);
+  // NEEDS REWORK
+  &__primary {
+    &.button__dark {
+      color: var(--primary-color);
+      background: var(--white-color);
+    }
+
+    &.button__light {
+      color: var(--white-color);
+      background: var(--primary-color);
+    }
+
+    &:hover {
+      color: var(--primary-color);
+      background: var(--light-gray-color);
+    }
   }
 
-  &__dark {
-    color: var(--primary-color);
-    background: var(--white-color);
-  }
+  &__secondary {
+    background-color: transparent;
 
-  &:hover {
-    color: var(--primary-color);
-    background: var(--light-gray-color);
+    &.button__dark {
+      color: var(--primary-color);
+    }
+
+    &.button__light {
+      color: var(--white-color);
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
