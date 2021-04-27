@@ -9,6 +9,10 @@
     padding: rem(170) rem(54);
   }
 
+  @include breakpoint("laptop") {
+    padding: rem(170) rem(110);
+  }
+
   .headline {
     margin-bottom: rem(20);
   }
