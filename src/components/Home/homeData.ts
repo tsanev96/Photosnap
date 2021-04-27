@@ -1,3 +1,4 @@
+import { ImageContent } from "../../types/interfaces/imageContent";
 import img1mobile from "../../images/home/mobile/create-and-share.jpg";
 import img2mobile from "../../images/home/mobile/beautiful-stories.jpg";
 import img3mobile from "../../images/home/mobile/designed-for-everyone.jpg";
@@ -8,7 +9,7 @@ import img1desktop from "../../images/home/desktop/create-and-share.jpg";
 import img2desktop from "../../images/home/desktop/beautiful-stories.jpg";
 import img3desktop from "../../images/home/desktop/designed-for-everyone.jpg";
 
-export const imageTextData = [
+export const imageTextData: ImageContent[] = [
   {
     image: {
       mobile: img1mobile,

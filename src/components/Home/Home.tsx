@@ -21,6 +21,7 @@ export const Home = () => {
               headline={headline}
               copy={copy}
               button={{ text: button.text }}
+              theme={theme}
               isOpacity
             />
           </ImageContent>
