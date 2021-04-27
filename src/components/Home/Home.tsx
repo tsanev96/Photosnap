@@ -37,7 +37,7 @@ export const Home = () => {
             copy={copy}
             image={{
               mobile: image.mobile,
-              desktop: image.mobile,
+              desktop: image.desktop,
               alt: image.alt,
             }}
           />

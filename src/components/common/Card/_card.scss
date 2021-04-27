@@ -5,6 +5,19 @@
   position: relative;
   padding: rem(230) rem(30) rem(40);
   background: rgba(0, 0, 0, 0.6);
+
+  &__mobile-image {
+    @include breakpoint("phablet") {
+      display: none;
+    }
+  }
+
+  &__desktop-image {
+    display: none;
+    @include breakpoint("phablet") {
+      display: block;
+    }
+  }
   .headline {
     margin-bottom: rem(10);
   }
@@ -21,8 +34,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100%;
     z-index: -1;
+    object-fit: cover;
   }
 }
