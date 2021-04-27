@@ -297,6 +297,9 @@ textarea {
 button,
 input {
   line-height: normal;
+  border: none;
+  outline: 0;
+  cursor: pointer;
 }
 
 /**

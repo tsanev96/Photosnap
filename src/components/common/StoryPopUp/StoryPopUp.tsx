@@ -25,9 +25,7 @@ export const StoryPopUp: FC<PropsStoryPop> = ({
   return (
     <div className={`story-pop-up ${isPopUpOpened ? "show" : ""}`}>
       <div className="story-pop-up__content">
-        <button onClick={onClick} className="story-pop-up__close">
-          close
-        </button>
+        <button onClick={onClick} className="story-pop-up__close" />
         <div className="story-pop-up__image-container">
           <img src={image.mobile} alt={image.alt} />
         </div>

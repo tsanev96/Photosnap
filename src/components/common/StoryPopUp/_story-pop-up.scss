@@ -27,11 +27,27 @@
 
     #{$self} {
       &__close {
+        @include flexCenter;
         position: absolute;
         top: 0;
         right: 0;
         width: rem(30);
         height: rem(30);
+        background-color: var(--white-color);
+
+        &::before,
+        &::after {
+          position: absolute;
+          content: "";
+          width: rem(15);
+          height: rem(2);
+          background-color: var(--primary-color);
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+        }
       }
 
       &__image-container {
