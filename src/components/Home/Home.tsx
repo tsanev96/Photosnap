@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from "../common/Card/Card";
+import { Story } from "../common/Card/Story";
 import { ImageContent } from "../common/ImageText/ImageContent";
 import { InfoText } from "../common/InfoText/InfoText";
 import { Stories } from "../common/Stories/Stories";
@@ -11,6 +11,7 @@ export const Home = () => {
       {imageTextData.map(
         ({ headline, copy, button, image, theme, isRowReversed }) => (
           <ImageContent
+            key={headline}
             image={{
               mobile: image.mobile,
               tablet: image.tablet,
@@ -31,7 +32,7 @@ export const Home = () => {
       )}
       <Stories>
         {storiesData.map(({ headline, copy, image }) => (
-          <Card
+          <Story
             key={headline}
             headline={headline}
             copy={copy}

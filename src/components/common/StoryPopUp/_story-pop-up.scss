@@ -1,0 +1,52 @@
+@import "../../../styles/mixins/mixins";
+@import "../../../styles/functions/pixel-to-rem";
+
+.story-pop-up {
+  $self: &;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  @include flexCenter;
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.3);
+  visibility: hidden;
+  transition: 0.6s;
+  opacity: 0;
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__content {
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+
+    #{$self} {
+      &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: rem(30);
+        height: rem(30);
+      }
+
+      &__image-container {
+        height: rem(200);
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &__info {
+        padding: rem(20);
+        background-color: var(--white-color);
+      }
+    }
+  }
+}

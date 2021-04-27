@@ -1,7 +1,7 @@
 @import "../../../styles/mixins/mixins";
 @import "../../../styles/functions/pixel-to-rem";
 
-.card {
+.story {
   position: relative;
   padding: rem(230) rem(30) rem(40);
   background: rgba(0, 0, 0, 0.6);
@@ -18,6 +18,17 @@
       display: block;
     }
   }
+
+  &__mobile-image,
+  &__desktop-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+  }
   .headline {
     margin-bottom: rem(10);
   }
@@ -28,15 +39,5 @@
 
   .line {
     margin-bottom: rem(20);
-  }
-
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    object-fit: cover;
   }
 }

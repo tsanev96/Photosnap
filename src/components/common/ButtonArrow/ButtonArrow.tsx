@@ -7,12 +7,14 @@ interface PropsButtonArrow {
   text: string;
   theme?: "dark" | "light";
   isSpaceBetween?: boolean;
+  onClick?: () => void;
 }
 
 export const ButtonArrow: FC<PropsButtonArrow> = ({
   text,
   theme = "dark",
   isSpaceBetween = false,
+  onClick,
 }) => {
   return (
     <div
@@ -20,7 +22,7 @@ export const ButtonArrow: FC<PropsButtonArrow> = ({
         isSpaceBetween ? "button-arrow__space-between" : ""
       }`}
     >
-      <Button type="secondary" theme={theme} text={text} />
+      <Button onClick={onClick} type="secondary" theme={theme} text={text} />
       <FaLongArrowAltRight />
     </div>
   );
