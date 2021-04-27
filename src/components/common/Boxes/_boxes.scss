@@ -4,4 +4,8 @@
 .boxes {
   display: flex;
   flex-direction: column;
+
+  @include breakpoint("laptop") {
+    flex-direction: row;
+  }
 }

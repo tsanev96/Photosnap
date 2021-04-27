@@ -3,6 +3,8 @@
 
 .box {
   padding: rem(50) rem(30) 0;
+  @include flexCenter;
+  flex-direction: column;
   text-align: center;
 
   &__icon {
@@ -18,5 +20,9 @@
 
   .copy {
     margin-bottom: rem(20);
+    @include breakpoint("phablet") {
+      width: 100%;
+      max-width: rem(450);
+    }
   }
 }
