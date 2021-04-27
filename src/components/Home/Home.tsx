@@ -1,4 +1,5 @@
 import React from "react";
+import { Card } from "../common/Card/Card";
 import { ImageContent } from "../common/ImageText/ImageContent";
 import { InfoText } from "../common/InfoText/InfoText";
 import { imageTextData } from "./homeData";
@@ -27,6 +28,7 @@ export const Home = () => {
           </ImageContent>
         )
       )}
+      <Card headline="headline card" copy="copy text" />
     </div>
   );
 };

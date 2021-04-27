@@ -90,6 +90,7 @@
   }
 
   &__links-mobile {
+    display: none;
     position: absolute;
     top: rem(70);
     padding: rem(30) rem(33) 0;

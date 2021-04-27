@@ -1,0 +1,19 @@
+@import "../../../styles/mixins/mixins";
+@import "../../../styles/functions/pixel-to-rem";
+
+.card {
+  padding: rem(230) rem(30) rem(40);
+  background-color: orange;
+
+  .headline {
+    margin-bottom: rem(10);
+  }
+
+  .copy {
+    margin-bottom: rem(16);
+  }
+
+  .line {
+    margin-bottom: rem(20);
+  }
+}

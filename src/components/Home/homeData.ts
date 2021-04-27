@@ -1,20 +1,13 @@
 import { ImageContent } from "../../types/interfaces/imageContent";
-import img1mobile from "../../images/home/mobile/create-and-share.jpg";
-import img2mobile from "../../images/home/mobile/beautiful-stories.jpg";
-import img3mobile from "../../images/home/mobile/designed-for-everyone.jpg";
-import img1tablet from "../../images/home/tablet/create-and-share.jpg";
-import img2tablet from "../../images/home/tablet/beautiful-stories.jpg";
-import img3tablet from "../../images/home/tablet/designed-for-everyone.jpg";
-import img1desktop from "../../images/home/desktop/create-and-share.jpg";
-import img2desktop from "../../images/home/desktop/beautiful-stories.jpg";
-import img3desktop from "../../images/home/desktop/designed-for-everyone.jpg";
+import { imagesContent } from "./homeImages";
 
+import storyImageOne from "../../images/home/desktop/designed-for-everyone.jpg";
 export const imageTextData: ImageContent[] = [
   {
     image: {
-      mobile: img1mobile,
-      tablet: img1tablet,
-      desktop: img1desktop,
+      mobile: imagesContent.image1.mobile,
+      tablet: imagesContent.image1.tablet,
+      desktop: imagesContent.image1.desktop,
       alt: "",
     },
     headline: "Create and share your photo stories.",
@@ -28,9 +21,9 @@ export const imageTextData: ImageContent[] = [
   },
   {
     image: {
-      mobile: img2mobile,
-      tablet: img2tablet,
-      desktop: img2desktop,
+      mobile: imagesContent.image2.mobile,
+      tablet: imagesContent.image2.tablet,
+      desktop: imagesContent.image2.desktop,
       alt: "",
     },
     headline: "BEAUTIFUL STORIES EVERY TIME",
@@ -44,9 +37,9 @@ export const imageTextData: ImageContent[] = [
   },
   {
     image: {
-      mobile: img3mobile,
-      tablet: img3tablet,
-      desktop: img3desktop,
+      mobile: imagesContent.image2.mobile,
+      tablet: imagesContent.image2.tablet,
+      desktop: imagesContent.image2.desktop,
       alt: "",
     },
     headline: "DESIGNED FOR EVERYONE",
@@ -57,5 +50,32 @@ export const imageTextData: ImageContent[] = [
     },
     theme: "dark",
     isRowReversed: true,
+  },
+];
+
+export const cards = [
+  {
+    headline: "The Mountains",
+    copy: "by John Appleseed",
+    buttonText: "READ STORY",
+    image: {},
+  },
+  {
+    headline: "Sunset Cityscapes",
+    copy: "by Benjamin Cruz",
+    buttonText: "READ STORY",
+    image: {},
+  },
+  {
+    headline: "18 Days Voyage",
+    copy: "by Alexei Borodin",
+    buttonText: "READ STORY",
+    image: {},
+  },
+  {
+    headline: "Architecturals",
+    copy: "by Samantha Brooke",
+    buttonText: "READ STORY",
+    image: {},
   },
 ];

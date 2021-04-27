@@ -11,4 +11,15 @@
     padding: 0;
     width: max-content;
   }
+
+  &__light {
+    svg {
+      fill: var(--white-color);
+    }
+  }
+
+  &__space-between {
+    justify-content: space-between;
+    width: 100%;
+  }
 }

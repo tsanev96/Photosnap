@@ -6,11 +6,20 @@ import "./_button-arrow.scss";
 interface PropsButtonArrow {
   text: string;
   theme?: "dark" | "light";
+  isSpaceBetween?: boolean;
 }
 
-export const ButtonArrow: FC<PropsButtonArrow> = ({ text, theme = "dark" }) => {
+export const ButtonArrow: FC<PropsButtonArrow> = ({
+  text,
+  theme = "dark",
+  isSpaceBetween = false,
+}) => {
   return (
-    <div className={`button-arrow button-arrow__${theme}`}>
+    <div
+      className={`button-arrow button-arrow__${theme} ${
+        isSpaceBetween ? "button-arrow__space-between" : ""
+      }`}
+    >
       <Button type="secondary" theme={theme} text={text} />
       <FaLongArrowAltRight />
     </div>
