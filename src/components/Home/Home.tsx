@@ -1,9 +1,11 @@
 import React from "react";
+import { Box } from "../common/Box/Box";
+import { Boxes } from "../common/Boxes/Boxes";
 import { Story } from "../common/Card/Story";
 import { ImageContent } from "../common/ImageText/ImageContent";
 import { InfoText } from "../common/InfoText/InfoText";
 import { Stories } from "../common/Stories/Stories";
-import { imageTextData, storiesData } from "./homeData";
+import { imageTextData, storiesData, cardsData } from "./homeData";
 
 export const Home = () => {
   return (
@@ -44,6 +46,11 @@ export const Home = () => {
           />
         ))}
       </Stories>
+      <Boxes>
+        {cardsData.map(({ headline, copy, icon }) => (
+          <Box key={headline} headline={headline} copy={copy} icon={icon} />
+        ))}
+      </Boxes>
     </div>
   );
 };

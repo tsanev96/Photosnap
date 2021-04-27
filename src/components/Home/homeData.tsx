@@ -1,5 +1,6 @@
 import { ImageContent } from "../../types/interfaces/imageContent";
 import { contentImages, storyImages } from "./homeImages";
+import { FaMobileAlt, FaInfinity, FaPaperPlane } from "react-icons/fa";
 
 export const imageTextData: ImageContent[] = [
   {
@@ -92,5 +93,26 @@ export const storiesData = [
       desktop: storyImages.image4.desktop,
       alt: storyImages.image4.alt,
     },
+  },
+];
+
+export const cardsData = [
+  {
+    headline: "100% Responsive",
+    copy:
+      "No matter which the device you’re on, our site is fully responsive and stories look beautiful on any screen.",
+    icon: <FaMobileAlt />,
+  },
+  {
+    headline: "No Photo Upload Limit",
+    copy:
+      "Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go.",
+    icon: <FaInfinity />,
+  },
+  {
+    headline: "Available to Embed",
+    copy:
+      "Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more. ",
+    icon: <FaPaperPlane />,
   },
 ];

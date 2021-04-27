@@ -1,0 +1,22 @@
+@import "../../../styles/mixins/mixins";
+@import "../../../styles/functions/pixel-to-rem";
+
+.box {
+  padding: rem(50) rem(30) 0;
+  text-align: center;
+
+  &__icon {
+    margin-bottom: rem(35);
+    svg {
+      font-size: rem(80);
+    }
+  }
+
+  .headline {
+    margin-bottom: rem(16);
+  }
+
+  .copy {
+    margin-bottom: rem(20);
+  }
+}
