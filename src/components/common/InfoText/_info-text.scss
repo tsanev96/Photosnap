@@ -2,8 +2,11 @@
 @import "../../../styles/functions/pixel-to-rem";
 
 .info-text {
+  $self: &;
+  position: relative;
   padding: rem(70) rem(20) rem(70) rem(30);
   height: 100%;
+  z-index: 1;
 
   @include breakpoint("phablet") {
     padding: rem(170) rem(54);
@@ -21,7 +24,26 @@
     margin-bottom: rem(23);
   }
 
-  .button-arrow {
+  &__content {
+    @include breakpoint("phablet") {
+      position: relative;
+    }
+    #{$self} {
+      &__colorful-rect-container {
+        position: absolute;
+        top: 0;
+        left: rem(30);
+
+        @include breakpoint("phablet") {
+          left: rem(-54);
+          height: 100%;
+        }
+
+        @include breakpoint("laptop") {
+          left: rem(-110);
+        }
+      }
+    }
   }
 
   &__dark {
