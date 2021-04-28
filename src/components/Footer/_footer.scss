@@ -12,6 +12,10 @@
     padding: rem(65) rem(40);
   }
 
+  @include breakpoint("laptop") {
+    padding: rem(65) rem(165);
+  }
+
   &__headline {
     @include flexCenter;
     margin-bottom: rem(30);
@@ -51,12 +55,17 @@
     li {
       margin-bottom: rem(20);
       text-transform: uppercase;
+      transition: 0.4s;
 
       a {
         font-size: rem(12);
         font-weight: bold;
         letter-spacing: rem(1);
         color: var(--white-color);
+
+        &:hover {
+          color: var(--light-gray-color);
+        }
       }
     }
   }
@@ -80,9 +89,18 @@
     }
   }
 
+  &__mobile {
+    @include breakpoint("phablet") {
+      display: none;
+    }
+  }
+
   &__desktop {
-    display: flex;
-    justify-content: space-between;
+    display: none;
+    @include breakpoint("phablet") {
+      display: flex;
+      justify-content: space-between;
+    }
 
     #{$self} {
       &__left-side {
@@ -100,6 +118,9 @@
           }
 
           &__links-tablet {
+            @include breakpoint("laptop") {
+              display: none;
+            }
             #{$self} {
               &__links {
                 display: flex;
@@ -108,6 +129,21 @@
                 & > * {
                   margin-right: rem(25);
                 }
+              }
+            }
+          }
+
+          &__links-desktop {
+            display: none;
+            margin-left: rem(110);
+
+            @include breakpoint("laptop") {
+              display: block;
+            }
+
+            ul {
+              & > *:last-child {
+                margin: 0;
               }
             }
           }
@@ -120,6 +156,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: flex-end;
       }
     }
   }

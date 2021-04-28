@@ -6,7 +6,7 @@ import "./_footer.scss";
 export const Footer: FC = () => {
   return (
     <div className="footer">
-      {/* <FooterMobile /> */}
+      <FooterMobile />
       <FooterDesktop />
     </div>
   );
