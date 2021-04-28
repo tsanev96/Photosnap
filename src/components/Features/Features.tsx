@@ -3,10 +3,10 @@ import { Box } from "../common/Box/Box";
 import { Boxes } from "../common/Boxes/Boxes";
 import { ImageContent } from "../common/ImageText/ImageContent";
 import { InfoText } from "../common/InfoText/InfoText";
+import { InfoTextImage } from "../common/InfoTextImage/InfoTextImage";
 import {
   imageContentData,
-  boxesFirstData,
-  boxesSecondData,
+  boxesFeatureData,
   imageInfoData,
 } from "./featuresData";
 
@@ -30,27 +30,20 @@ export const Features = () => {
         />
       </ImageContent>
       <Boxes>
-        {boxesFirstData.map(({ headline, copy, icon }) => (
+        {boxesFeatureData.map(({ headline, copy, icon }) => (
           <Box key={headline} headline={headline} copy={copy} icon={icon} />
         ))}
       </Boxes>
-      <Boxes>
-        {boxesSecondData.map(({ headline, copy, icon }) => (
-          <Box key={headline} headline={headline} copy={copy} icon={icon} />
-        ))}
-      </Boxes>
-      <InfoText
+      <InfoTextImage
         headline={imageInfoData.headline}
-        copy={imageInfoData.copy}
         theme={imageInfoData.theme}
-        isOpacity
         image={{
           mobile: imageInfoData.image.mobile,
           tablet: imageInfoData.image.tablet,
           desktop: imageInfoData.image.desktop,
           alt: imageInfoData.image.alt,
         }}
-        button={imageInfoData.button && { text: imageInfoData.button.text }}
+        button={{ text: imageInfoData.button.text }}
       />
     </div>
   );

@@ -1,7 +1,7 @@
 import { ImageDetails } from "./imageDetails";
 import { ThemeVariants } from "./theme";
 
-export interface ImageContent {
+export interface ImageContentCols {
   image: ImageDetails;
   headline: string;
   copy?: string;

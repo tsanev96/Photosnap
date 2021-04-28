@@ -1,0 +1,15 @@
+@import "../../../styles/mixins/mixins";
+@import "../../../styles/functions/pixel-to-rem";
+
+.info-text-image {
+  position: relative;
+  padding: rem(65) rem(30);
+
+  .headline {
+    margin-bottom: rem(25);
+  }
+
+  img {
+    @include imageBackground;
+  }
+}

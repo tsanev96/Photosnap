@@ -15,6 +15,7 @@ import { BoxContent } from "../../types/interfaces/boxContent";
 import imgBetaMobile from "../../images/shared/mobile/bg-beta.jpg";
 import imgBetaTablet from "../../images/shared/tablet/bg-beta.jpg";
 import imgBetaDesktop from "../../images/shared/desktop/bg-beta.jpg";
+import { InfoImageContent } from "../../types/interfaces/infoImageContent";
 
 export const imageContentData: ImageContent = {
   image: {
@@ -30,7 +31,7 @@ export const imageContentData: ImageContent = {
   isRowReversed: true,
 };
 
-export const boxesFirstData: BoxContent[] = [
+export const boxesFeatureData: BoxContent[] = [
   {
     headline: "100% Responsive",
     copy:
@@ -49,9 +50,6 @@ export const boxesFirstData: BoxContent[] = [
       "Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more. ",
     icon: <FaPaperPlane />,
   },
-];
-
-export const boxesSecondData: BoxContent[] = [
   {
     headline: "Custom Domain",
     copy:
@@ -72,7 +70,7 @@ export const boxesSecondData: BoxContent[] = [
   },
 ];
 
-export const imageInfoData: ImageContent = {
+export const imageInfoData: InfoImageContent = {
   image: {
     mobile: imgBetaMobile,
     tablet: imgBetaTablet,
@@ -84,5 +82,4 @@ export const imageInfoData: ImageContent = {
     text: "GET AN INVITE",
   },
   theme: "light",
-  isRowReversed: true,
 };

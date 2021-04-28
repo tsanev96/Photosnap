@@ -39,8 +39,4 @@
     color: var(--white-color);
     background: var(--primary-color);
   }
-
-  img {
-    @include imageBackground;
-  }
 }

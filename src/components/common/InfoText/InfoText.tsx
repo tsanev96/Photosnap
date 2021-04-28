@@ -15,7 +15,6 @@ interface PropsInfoText {
   };
   theme?: "dark" | "light";
   isOpacity?: true | false;
-  image?: ImageDetails;
 }
 
 export const InfoText: FC<PropsInfoText> = ({
@@ -24,7 +23,6 @@ export const InfoText: FC<PropsInfoText> = ({
   button,
   theme = "dark",
   isOpacity = false,
-  image,
 }) => {
   return (
     <div className={`info-text info-text__${theme}`}>
@@ -34,7 +32,6 @@ export const InfoText: FC<PropsInfoText> = ({
       <Headline level="h2" text={headline} theme={theme} />
       {copy && <Copy text={copy} theme={theme} isOpacity={isOpacity} />}
       {button && <ButtonArrow text={button.text} theme={theme} />}
-      {image && <Image image={image} />}
     </div>
   );
 };
