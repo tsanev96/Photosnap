@@ -25,7 +25,7 @@ export const Home = () => {
             <InfoText
               headline={headline}
               copy={copy}
-              button={{ text: button.text }}
+              button={button && { text: button.text }}
               theme={theme}
               isOpacity
             />

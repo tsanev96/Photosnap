@@ -2,6 +2,7 @@
 @import "../../../styles/functions/pixel-to-rem";
 
 .info-text {
+  position: relative;
   padding: rem(70) rem(20) rem(70) rem(30);
   height: 100%;
 
@@ -21,7 +22,11 @@
     margin-bottom: rem(23);
   }
 
-  .button-arrow {
+  &__colorful-rect-container {
+    position: absolute;
+    top: 0;
+    left: rem(30);
+    width: rem(128);
   }
 
   &__dark {

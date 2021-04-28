@@ -9,7 +9,7 @@ export interface ImageContent {
   };
   headline: string;
   copy: string;
-  button: {
+  button?: {
     text: string;
   };
   theme: "dark" | "light";

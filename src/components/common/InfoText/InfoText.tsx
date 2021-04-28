@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { ButtonArrow } from "../ButtonArrow/ButtonArrow";
+import { ColorfulRectangle } from "../ColorfulRectangle/ColorfulRectangle";
 import { Copy } from "../Copy/Copy";
 import { Headline } from "../Headline/Headline";
 import "./_info-text.scss";
@@ -7,7 +8,7 @@ import "./_info-text.scss";
 interface PropsInfoText {
   headline: string;
   copy: string;
-  button: {
+  button?: {
     text: string;
   };
   theme?: "dark" | "light";
@@ -23,9 +24,12 @@ export const InfoText: FC<PropsInfoText> = ({
 }) => {
   return (
     <div className={`info-text info-text__${theme}`}>
+      <div className="info-text__colorful-rect-container">
+        <ColorfulRectangle />
+      </div>
       <Headline level="h2" text={headline} theme={theme} />
       <Copy text={copy} theme={theme} isOpacity={isOpacity} />
-      <ButtonArrow text={button.text} theme={theme} />
+      {button && <ButtonArrow text={button.text} theme={theme} />}
     </div>
   );
 };
