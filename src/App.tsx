@@ -4,6 +4,7 @@ import { Home } from "./components/Home/Home";
 import { Footer } from "./components/Footer/Footer";
 import "../src/styles/theme.scss";
 import { Features } from "./components/Features/Features";
+import { Stories } from "./components/Stories/Stories";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/features" component={Features} />
+        <Route path="/stories" component={Stories} />
       </Switch>
       <Footer />
     </BrowserRouter>
