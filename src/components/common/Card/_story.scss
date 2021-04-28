@@ -1,0 +1,43 @@
+@import "../../../styles/mixins/mixins";
+@import "../../../styles/functions/pixel-to-rem";
+
+.story {
+  position: relative;
+  padding: rem(230) rem(30) rem(40);
+  background: rgba(0, 0, 0, 0.6);
+
+  &__mobile-image {
+    @include breakpoint("phablet") {
+      display: none;
+    }
+  }
+
+  &__desktop-image {
+    display: none;
+    @include breakpoint("phablet") {
+      display: block;
+    }
+  }
+
+  &__mobile-image,
+  &__desktop-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+  }
+  .headline {
+    margin-bottom: rem(10);
+  }
+
+  .copy {
+    margin-bottom: rem(16);
+  }
+
+  .line {
+    margin-bottom: rem(20);
+  }
+}

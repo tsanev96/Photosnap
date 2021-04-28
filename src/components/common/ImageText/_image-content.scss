@@ -1,0 +1,69 @@
+@import "../../../styles/mixins/mixins";
+@import "../../../styles/functions/pixel-to-rem";
+
+.image-content {
+  $self: &;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint("phablet") {
+    flex-direction: row;
+
+    &__row-reversed {
+      flex-direction: row-reverse;
+    }
+  }
+
+  @include breakpoint("phablet") {
+  }
+
+  &__img-container {
+    flex: 1;
+
+    @include breakpoint("laptop") {
+      width: 60%;
+      flex: none;
+    }
+
+    #{$self} {
+      &__mobile {
+        display: none;
+        @include breakpoint("mobileonly") {
+          display: block;
+        }
+      }
+
+      &__tablet {
+        display: none;
+        @include breakpoint("phablet") {
+          display: block;
+        }
+
+        @include breakpoint("laptop") {
+          display: none;
+        }
+      }
+
+      &__desktop {
+        display: none;
+        @include breakpoint("laptop") {
+          display: block;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    flex: 2;
+
+    @include breakpoint("laptop") {
+      width: 40%;
+      flex: none;
+    }
+  }
+}

@@ -10,7 +10,7 @@ interface PropsHeadline {
 export const Headline: FC<PropsHeadline> = ({
   level = "h1",
   text,
-  theme = "light",
+  theme = "dark",
 }) => {
   const classes = `headline ${level} headline__${theme}`;
   // NEEDS REWORK

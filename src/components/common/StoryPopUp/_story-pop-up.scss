@@ -1,0 +1,112 @@
+@import "../../../styles/mixins/mixins";
+@import "../../../styles/functions/pixel-to-rem";
+
+.story-pop-up {
+  $self: &;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  @include flexCenter;
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.3);
+  visibility: hidden;
+  transition: 0.6s;
+  opacity: 0;
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__content {
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+
+    @include breakpoint("phablet") {
+      width: 85%;
+    }
+
+    @include breakpoint("tablet") {
+      width: 60%;
+    }
+
+    @include breakpoint("laptop") {
+      width: 40%;
+    }
+
+    #{$self} {
+      &__close {
+        @include flexCenter;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: rem(30);
+        height: rem(30);
+        background-color: var(--white-color);
+        transition: 0.6s;
+
+        @include breakpoint("phablet") {
+          width: rem(50);
+          height: rem(50);
+        }
+
+        &::before,
+        &::after {
+          position: absolute;
+          content: "";
+          width: rem(15);
+          height: rem(2);
+          background-color: var(--primary-color);
+          transform: rotate(45deg);
+          transition: 0.5s;
+
+          @include breakpoint("phablet") {
+            width: rem(30);
+            height: rem(3);
+          }
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+        }
+
+        &:hover {
+          background: var(--light-gray-color);
+          &::before,
+          &::after {
+            transform: rotate(30deg);
+          }
+
+          &::after {
+            transform: rotate(90deg);
+          }
+        }
+      }
+
+      &__image-container {
+        height: rem(350);
+
+        @include breakpoint("phablet") {
+          height: rem(400);
+        }
+
+        @include breakpoint("tablet") {
+          height: rem(450);
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &__info {
+        padding: rem(20);
+        background-color: var(--white-color);
+      }
+    }
+  }
+}

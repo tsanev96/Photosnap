@@ -1,0 +1,36 @@
+@import "../../../styles/mixins/mixins";
+@import "../../../styles/functions/pixel-to-rem";
+
+.info-text {
+  padding: rem(70) rem(20) rem(70) rem(30);
+  height: 100%;
+
+  @include breakpoint("phablet") {
+    padding: rem(170) rem(54);
+  }
+
+  @include breakpoint("laptop") {
+    padding: rem(170) rem(110);
+  }
+
+  .headline {
+    margin-bottom: rem(20);
+  }
+
+  .copy {
+    margin-bottom: rem(23);
+  }
+
+  .button-arrow {
+  }
+
+  &__dark {
+    color: var(--primary-color);
+    background: var(--white-color);
+  }
+
+  &__light {
+    color: var(--white-color);
+    background: var(--primary-color);
+  }
+}

@@ -1,0 +1,18 @@
+@import "../../../styles/mixins/mixins";
+@import "../../../styles/functions/pixel-to-rem";
+
+.copy {
+  font-size: rem(18);
+  line-height: rem(25);
+  &__dark {
+    color: var(--primary-color);
+  }
+
+  &__light {
+    color: var(--white-color);
+  }
+
+  &__opacity-true {
+    opacity: 0.6;
+  }
+}

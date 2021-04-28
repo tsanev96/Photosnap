@@ -1,0 +1,15 @@
+@import "../../../styles/mixins/mixins";
+@import "../../../styles/functions/pixel-to-rem";
+
+.stories {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include breakpoint("mobileMin") {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include breakpoint("laptop") {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

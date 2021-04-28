@@ -1,0 +1,25 @@
+@import "../../../styles/mixins/mixins";
+@import "../../../styles/functions/pixel-to-rem";
+
+.button-arrow {
+  @include verticalFlexCenter;
+  padding: 0;
+  width: max-content;
+
+  .button {
+    margin-right: rem(20);
+    padding: 0;
+    width: max-content;
+  }
+
+  &__light {
+    svg {
+      fill: var(--white-color);
+    }
+  }
+
+  &__space-between {
+    justify-content: space-between;
+    width: 100%;
+  }
+}

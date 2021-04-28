@@ -1,6 +1,10 @@
-import React from "react";
+import React, { FC } from "react";
 import "./styles.scss";
 
-export const Line = () => {
-  return <div className="line" />;
+interface PropsLine {
+  theme?: "light" | "dark";
+}
+
+export const Line: FC<PropsLine> = ({ theme = "dark" }) => {
+  return <div className={`line line__${theme}`} />;
 };
