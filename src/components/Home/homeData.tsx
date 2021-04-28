@@ -1,6 +1,7 @@
 import { ImageContent } from "../../types/interfaces/imageContent";
 import { contentImages, storyImages } from "./homeImages";
 import { FaMobileAlt, FaInfinity, FaPaperPlane } from "react-icons/fa";
+import { BoxContent } from "../../types/interfaces/boxContent";
 
 export const imageTextData: ImageContent[] = [
   {
@@ -96,7 +97,7 @@ export const storiesData = [
   },
 ];
 
-export const cardsData = [
+export const cardsData: BoxContent[] = [
   {
     headline: "100% Responsive",
     copy:

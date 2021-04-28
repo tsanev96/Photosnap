@@ -1,7 +1,13 @@
 import React from "react";
+import { Box } from "../common/Box/Box";
+import { Boxes } from "../common/Boxes/Boxes";
 import { ImageContent } from "../common/ImageText/ImageContent";
 import { InfoText } from "../common/InfoText/InfoText";
-import { featureImageContentData } from "./featuresData";
+import {
+  featureImageContentData,
+  boxesFirstData,
+  boxesSecondData,
+} from "./featuresData";
 
 export const Features = () => {
   return (
@@ -22,6 +28,16 @@ export const Features = () => {
           isOpacity
         />
       </ImageContent>
+      <Boxes>
+        {boxesFirstData.map(({ headline, copy, icon }) => (
+          <Box key={headline} headline={headline} copy={copy} icon={icon} />
+        ))}
+      </Boxes>
+      <Boxes>
+        {boxesSecondData.map(({ headline, copy, icon }) => (
+          <Box key={headline} headline={headline} copy={copy} icon={icon} />
+        ))}
+      </Boxes>
     </div>
   );
 };
