@@ -3,10 +3,14 @@
 
 .footer {
   $self: &;
-  padding: 56px 60px;
+  padding: rem(56) rem(60);
   background: var(--primary-color);
   color: var(--white-color);
   text-align: center;
+
+  @include breakpoint("phablet") {
+    padding: rem(65) rem(40);
+  }
 
   &__headline {
     @include flexCenter;
@@ -16,6 +20,10 @@
   &__socials {
     @include horizontalFlexCenter;
     margin-bottom: rem(50);
+
+    @include breakpoint("phablet") {
+      margin-bottom: 0;
+    }
 
     #{$self} {
       &__social {
@@ -35,6 +43,11 @@
 
   &__links {
     margin-bottom: rem(120);
+
+    @include breakpoint("phablet") {
+      margin-bottom: 0;
+    }
+
     li {
       margin-bottom: rem(20);
       text-transform: uppercase;
@@ -61,5 +74,53 @@
     margin-bottom: rem(55);
     opacity: 0.5;
     font-size: rem(15);
+
+    @include breakpoint("phablet") {
+      margin-bottom: 0;
+    }
+  }
+
+  &__desktop {
+    display: flex;
+    justify-content: space-between;
+
+    #{$self} {
+      &__left-side {
+        display: flex;
+
+        #{$self} {
+          &__headline-socials {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            & > * {
+              justify-content: flex-start;
+            }
+          }
+
+          &__links-tablet {
+            #{$self} {
+              &__links {
+                display: flex;
+                margin-bottom: rem(70);
+
+                & > * {
+                  margin-right: rem(25);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #{$self} {
+      &__right-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
   }
 }
