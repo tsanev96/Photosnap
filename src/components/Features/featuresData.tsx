@@ -2,7 +2,7 @@ import React from "react";
 import imageContentMobile from "../../images/features/mobile/hero.jpg";
 import imageContentTablet from "../../images/features/tablet/hero.jpg";
 import imageContentDesktop from "../../images/features/desktop/hero.jpg";
-import { ImageContent } from "../../types/interfaces/imageContent";
+import { ImageContentCols } from "../../types/interfaces/imageContentCols";
 import {
   FaDragon,
   FaInfinity,
@@ -17,7 +17,7 @@ import imgBetaTablet from "../../images/shared/tablet/bg-beta.jpg";
 import imgBetaDesktop from "../../images/shared/desktop/bg-beta.jpg";
 import { InfoImageContent } from "../../types/interfaces/infoImageContent";
 
-export const imageContentData: ImageContent = {
+export const imageContentData: ImageContentCols = {
   image: {
     mobile: imageContentMobile,
     tablet: imageContentTablet,

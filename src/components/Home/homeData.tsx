@@ -1,9 +1,9 @@
-import { ImageContent } from "../../types/interfaces/imageContent";
+import { ImageContentCols } from "../../types/interfaces/imageContentCols";
 import { contentImages, storyImages } from "./homeImages";
 import { FaMobileAlt, FaInfinity, FaPaperPlane } from "react-icons/fa";
 import { BoxContent } from "../../types/interfaces/boxContent";
 
-export const imageTextData: ImageContent[] = [
+export const imageTextData: ImageContentCols[] = [
   {
     image: {
       mobile: contentImages.image1.mobile,

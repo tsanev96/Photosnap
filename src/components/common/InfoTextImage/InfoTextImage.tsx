@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { ImageDetails } from "../../../types/interfaces/imageDetails";
 import { ButtonArrow } from "../ButtonArrow/ButtonArrow";
+import { ColorfulRectangle } from "../ColorfulRectangle/ColorfulRectangle";
 import { Headline } from "../Headline/Headline";
 import { Image } from "../Image/Image";
 import "./_info-text-image.scss";
@@ -22,8 +23,13 @@ export const InfoTextImage: FC<PropsInfoTextImage> = ({
 }) => {
   return (
     <div className="info-text-image">
-      <Headline theme={theme} text={headline} level="h2" />
-      <ButtonArrow theme={theme} text={button.text} />
+      <div className="info-text-image__colorful-rect">
+        <ColorfulRectangle />
+      </div>
+      <div className="info-text-image__content">
+        <Headline theme={theme} text={headline} level="h2" />
+        <ButtonArrow theme={theme} text={button.text} />
+      </div>
       <Image image={image} />
     </div>
   );

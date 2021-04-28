@@ -2,10 +2,16 @@
 @import "../../../styles/functions/pixel-to-rem";
 
 .boxes {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include breakpoint("phablet") {
+    &__two-cols-tablet {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
 
   @include breakpoint("laptop") {
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }

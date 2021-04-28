@@ -5,8 +5,33 @@
   position: relative;
   padding: rem(65) rem(30);
 
-  .headline {
-    margin-bottom: rem(25);
+  @include breakpoint("laptop") {
+    padding: rem(70) rem(165);
+  }
+
+  &__colorful-rect {
+    position: absolute;
+    top: 0;
+    left: rem(30);
+
+    @include breakpoint("phablet") {
+      left: 0;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    @include breakpoint("laptop") {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .headline {
+      @include breakpoint("laptop") {
+        width: rem(400);
+      }
+      margin-bottom: rem(25);
+    }
   }
 
   img {

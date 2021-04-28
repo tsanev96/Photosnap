@@ -26,12 +26,14 @@ export const InfoText: FC<PropsInfoText> = ({
 }) => {
   return (
     <div className={`info-text info-text__${theme}`}>
-      <div className="info-text__colorful-rect-container">
-        <ColorfulRectangle />
+      <div className="info-text__content">
+        <div className="info-text__colorful-rect-container">
+          <ColorfulRectangle />
+        </div>
+        <Headline level="h2" text={headline} theme={theme} />
+        {copy && <Copy text={copy} theme={theme} isOpacity={isOpacity} />}
+        {button && <ButtonArrow text={button.text} theme={theme} />}
       </div>
-      <Headline level="h2" text={headline} theme={theme} />
-      {copy && <Copy text={copy} theme={theme} isOpacity={isOpacity} />}
-      {button && <ButtonArrow text={button.text} theme={theme} />}
     </div>
   );
 };

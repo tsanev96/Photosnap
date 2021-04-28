@@ -29,7 +29,7 @@ export const Features = () => {
           isOpacity
         />
       </ImageContent>
-      <Boxes>
+      <Boxes twoColsTablet>
         {boxesFeatureData.map(({ headline, copy, icon }) => (
           <Box key={headline} headline={headline} copy={copy} icon={icon} />
         ))}

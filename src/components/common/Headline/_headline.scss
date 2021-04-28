@@ -4,7 +4,7 @@
 .headline {
   font-family: "DMSans Bold", sans-serif;
   font-weight: bold;
-  letter-spacing: normal;
+  letter-spacing: rem(2);
 
   &.h1 {
     font-size: rem(48);

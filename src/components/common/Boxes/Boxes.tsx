@@ -1,6 +1,14 @@
 import React, { FC } from "react";
 import "./_boxes.scss";
 
-export const Boxes: FC = ({ children }) => {
-  return <div className="boxes">{children}</div>;
+interface BoxesProps {
+  twoColsTablet?: boolean;
+}
+
+export const Boxes: FC<BoxesProps> = ({ children, twoColsTablet = false }) => {
+  return (
+    <div className={`boxes ${twoColsTablet && "boxes__two-cols-tablet"}`}>
+      {children}
+    </div>
+  );
 };

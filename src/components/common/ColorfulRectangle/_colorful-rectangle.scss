@@ -1,5 +1,13 @@
+@import "../../../styles/mixins/mixins";
+@import "../../../styles/functions/pixel-to-rem";
+
 .colorful-rectangle {
-  width: 100%;
-  height: 6px;
+  width: rem(130);
+  height: rem(6);
   background-image: linear-gradient(to top, #ffc593, #bc7198, #5a77ff);
+
+  @include breakpoint("phablet") {
+    width: rem(6);
+    height: 100%;
+  }
 }
