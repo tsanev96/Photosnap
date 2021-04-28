@@ -12,8 +12,11 @@ import {
 } from "react-icons/fa";
 import { MdDomain } from "react-icons/md";
 import { BoxContent } from "../../types/interfaces/boxContent";
+import imgBetaMobile from "../../images/shared/mobile/bg-beta.jpg";
+import imgBetaTablet from "../../images/shared/tablet/bg-beta.jpg";
+import imgBetaDesktop from "../../images/shared/desktop/bg-beta.jpg";
 
-export const featureImageContentData: ImageContent = {
+export const imageContentData: ImageContent = {
   image: {
     mobile: imageContentMobile,
     tablet: imageContentTablet,
@@ -68,3 +71,18 @@ export const boxesSecondData: BoxContent[] = [
     icon: <FaDragon />,
   },
 ];
+
+export const imageInfoData: ImageContent = {
+  image: {
+    mobile: imgBetaMobile,
+    tablet: imgBetaTablet,
+    desktop: imgBetaDesktop,
+    alt: "beta",
+  },
+  headline: "We’re in beta.Get your invite today!",
+  button: {
+    text: "GET AN INVITE",
+  },
+  theme: "light",
+  isRowReversed: true,
+};

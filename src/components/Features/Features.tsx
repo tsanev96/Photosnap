@@ -4,9 +4,10 @@ import { Boxes } from "../common/Boxes/Boxes";
 import { ImageContent } from "../common/ImageText/ImageContent";
 import { InfoText } from "../common/InfoText/InfoText";
 import {
-  featureImageContentData,
+  imageContentData,
   boxesFirstData,
   boxesSecondData,
+  imageInfoData,
 } from "./featuresData";
 
 export const Features = () => {
@@ -14,17 +15,17 @@ export const Features = () => {
     <div className="features">
       <ImageContent
         image={{
-          mobile: featureImageContentData.image.mobile,
-          tablet: featureImageContentData.image.tablet,
-          desktop: featureImageContentData.image.desktop,
-          alt: featureImageContentData.image.alt,
+          mobile: imageContentData.image.mobile,
+          tablet: imageContentData.image.tablet,
+          desktop: imageContentData.image.desktop,
+          alt: imageContentData.image.alt,
         }}
-        isRowReversed={featureImageContentData.isRowReversed}
+        isRowReversed={imageContentData.isRowReversed}
       >
         <InfoText
-          headline={featureImageContentData.headline}
-          copy={featureImageContentData.copy}
-          theme={featureImageContentData.theme}
+          headline={imageContentData.headline}
+          copy={imageContentData.copy}
+          theme={imageContentData.theme}
           isOpacity
         />
       </ImageContent>
@@ -38,6 +39,19 @@ export const Features = () => {
           <Box key={headline} headline={headline} copy={copy} icon={icon} />
         ))}
       </Boxes>
+      <InfoText
+        headline={imageInfoData.headline}
+        copy={imageInfoData.copy}
+        theme={imageInfoData.theme}
+        isOpacity
+        image={{
+          mobile: imageInfoData.image.mobile,
+          tablet: imageInfoData.image.tablet,
+          desktop: imageInfoData.image.desktop,
+          alt: imageInfoData.image.alt,
+        }}
+        button={imageInfoData.button && { text: imageInfoData.button.text }}
+      />
     </div>
   );
 };

@@ -1,0 +1,27 @@
+@import "../../../styles/mixins/mixins";
+@import "../../../styles/functions/pixel-to-rem";
+
+.image {
+  &__mobile {
+    @include breakpoint("phablet") {
+      display: none;
+    }
+  }
+
+  &__tablet {
+    display: none;
+    @include breakpoint("phablet") {
+      display: block;
+    }
+    @include breakpoint("laptop") {
+      display: none;
+    }
+  }
+
+  &__desktop {
+    display: none;
+    @include breakpoint("laptop") {
+      display: block;
+    }
+  }
+}

@@ -5,6 +5,7 @@
   position: relative;
   padding: rem(70) rem(20) rem(70) rem(30);
   height: 100%;
+  z-index: 1;
 
   @include breakpoint("phablet") {
     padding: rem(170) rem(54);
@@ -37,5 +38,9 @@
   &__light {
     color: var(--white-color);
     background: var(--primary-color);
+  }
+
+  img {
+    @include imageBackground;
   }
 }

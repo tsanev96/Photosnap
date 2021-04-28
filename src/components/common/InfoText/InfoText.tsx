@@ -1,18 +1,21 @@
 import React, { FC } from "react";
+import { ImageDetails } from "../../../types/interfaces/imageDetails";
 import { ButtonArrow } from "../ButtonArrow/ButtonArrow";
 import { ColorfulRectangle } from "../ColorfulRectangle/ColorfulRectangle";
 import { Copy } from "../Copy/Copy";
 import { Headline } from "../Headline/Headline";
+import { Image } from "../Image/Image";
 import "./_info-text.scss";
 
 interface PropsInfoText {
   headline: string;
-  copy: string;
+  copy?: string;
   button?: {
     text: string;
   };
   theme?: "dark" | "light";
   isOpacity?: true | false;
+  image?: ImageDetails;
 }
 
 export const InfoText: FC<PropsInfoText> = ({
@@ -21,6 +24,7 @@ export const InfoText: FC<PropsInfoText> = ({
   button,
   theme = "dark",
   isOpacity = false,
+  image,
 }) => {
   return (
     <div className={`info-text info-text__${theme}`}>
@@ -28,8 +32,9 @@ export const InfoText: FC<PropsInfoText> = ({
         <ColorfulRectangle />
       </div>
       <Headline level="h2" text={headline} theme={theme} />
-      <Copy text={copy} theme={theme} isOpacity={isOpacity} />
+      {copy && <Copy text={copy} theme={theme} isOpacity={isOpacity} />}
       {button && <ButtonArrow text={button.text} theme={theme} />}
+      {image && <Image image={image} />}
     </div>
   );
 };
