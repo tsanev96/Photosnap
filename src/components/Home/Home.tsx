@@ -32,7 +32,7 @@ export const Home = () => {
           </ImageContent>
         )
       )}
-      {/* <Stories>
+      <Stories>
         {storiesData.map(({ headline, copy, image }) => (
           <Story
             key={headline}
@@ -45,7 +45,7 @@ export const Home = () => {
             }}
           />
         ))}
-      </Stories> */}
+      </Stories>
       <Boxes>
         {cardsData.map(({ headline, copy, icon }) => (
           <Box key={headline} headline={headline} copy={copy} icon={icon} />
