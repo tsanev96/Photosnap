@@ -1,0 +1,30 @@
+@import "../../../styles/mixins/mixins";
+@import "../../../styles/functions/pixel-to-rem";
+
+.info-image-detailed {
+  padding: rem(48) rem(29);
+
+  &__dark {
+    background: var(--white-color);
+  }
+
+  &__light {
+    background: var(--primary-color);
+  }
+
+  .headline {
+    margin-bottom: rem(16);
+  }
+
+  .copy {
+    margin-bottom: rem(24);
+  }
+
+  &__author {
+    display: flex;
+
+    & > *:first-child {
+      margin-right: rem(10);
+    }
+  }
+}

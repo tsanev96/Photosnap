@@ -2,7 +2,6 @@
 @import "../../../styles/functions/pixel-to-rem";
 
 .copy {
-  font-size: rem(18);
   line-height: rem(25);
   &__dark {
     color: var(--primary-color);
@@ -14,5 +13,17 @@
 
   &__opacity-true {
     opacity: 0.6;
+  }
+
+  &__size-sm {
+    font-size: rem(12);
+  }
+
+  &__size-lg {
+    font-size: rem(15);
+  }
+
+  &__size-xl {
+    font-size: rem(18);
   }
 }

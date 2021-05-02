@@ -1,21 +1,3 @@
-// import imageContent1mobile from "../../images/home/mobile/1.jpg";
-// import imageContent2mobile from "../../images/home/mobile/2.jpg";
-// import imageContent3mobile from "../../images/home/mobile/3.jpg";
-// import imageContent1tablet from "../../images/home/tablet/1.jpg";
-// import imageContent2tablet from "../../images/home/tablet/2.jpg";
-// import imageContent3tablet from "../../images/home/tablet/3.jpg";
-// import imageContent1desktop from "../../images/home/desktop/1.jpg";
-// import imageContent2desktop from "../../images/home/desktop/2.jpg";
-// import imageContent3desktop from "../../images/home/desktop/3.jpg";
-// import storyImage1mobile from "../../images/stories/mobile/4.jpg";
-// import storyImage1desktop from "../../images/stories/desktop/4.jpg";
-// import storyImage2mobile from "../../images/stories/mobile/cityscapes.jpg";
-// import storyImage2desktop from "../../images/stories/desktop/cityscapes.jpg";
-// import storyImage3mobile from "../../images/stories/mobile/18-days-voyage.jpg";
-// import storyImage3desktop from "../../images/stories/desktop/18-days-voyage.jpg";
-// import storyImage4mobile from "../../images/stories/mobile/architecturals.jpg";
-// import storyImage4desktop from "../../images/stories/desktop/architecturals.jpg";
-
 import { importAll } from "../../utils/imagesImport";
 
 const homeImagesMobile = importAll(

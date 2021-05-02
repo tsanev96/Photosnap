@@ -4,6 +4,23 @@ export const storyImageMobile = importAll(
   require.context("../../images/stories/mobile", false, /\.(png|jpe?g|svg)$/)
 );
 
+export const teaserStoryData = {
+  smallHeadline: "LAST MONTH’S FEATURED STORY",
+  headline: "HAZY FULL MOON OF APPALACHIA",
+  imageTakenInfo: {
+    data: "March 2nd 2020",
+    by: "by John Appleseed",
+  },
+  description:
+    'The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.',
+  image: {
+    mobile: storyImageMobile[16].default,
+    tablet: storyImageMobile[16].default,
+    desktop: storyImageMobile[16].default,
+    alt: "moon",
+  },
+};
+
 export const storiesData = [
   {
     headline: "The Mountains",

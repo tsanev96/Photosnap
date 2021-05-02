@@ -27,9 +27,8 @@
 
     #{$self} {
       &__mobile {
-        display: none;
-        @include breakpoint("mobileonly") {
-          display: block;
+        @include breakpoint("phablet") {
+          display: none;
         }
       }
 
