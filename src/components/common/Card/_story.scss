@@ -4,7 +4,7 @@
 .story {
   position: relative;
   padding: rem(230) rem(30) rem(40);
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.3);
 
   &__mobile-image {
     @include breakpoint("phablet") {

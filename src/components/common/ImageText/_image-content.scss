@@ -3,6 +3,7 @@
 
 .image-content {
   $self: &;
+  position: relative;
   display: flex;
   flex-direction: column;
 
@@ -12,9 +13,6 @@
     &__row-reversed {
       flex-direction: row-reverse;
     }
-  }
-
-  @include breakpoint("phablet") {
   }
 
   &__img-container {
@@ -27,9 +25,8 @@
 
     #{$self} {
       &__mobile {
-        display: none;
-        @include breakpoint("mobileonly") {
-          display: block;
+        @include breakpoint("phablet") {
+          display: none;
         }
       }
 
