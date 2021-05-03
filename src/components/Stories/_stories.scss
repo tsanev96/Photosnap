@@ -1,7 +1,7 @@
 @import "../../styles/mixins/mixins";
 @import "../../styles/functions/pixel-to-rem";
 
-.stories-wrapper {
+.stories-page {
   .image-content__img-container {
     @include breakpoint("phablet") {
       display: none;

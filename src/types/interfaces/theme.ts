@@ -1,3 +1,3 @@
 export interface ThemeVariants {
-  theme: "dark" | "light";
+  theme?: "dark" | "light";
 }

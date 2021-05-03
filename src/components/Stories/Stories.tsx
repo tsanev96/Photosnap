@@ -8,7 +8,7 @@ import "./_stories.scss";
 
 export const Stories = () => {
   return (
-    <div className="stories-wrapper">
+    <div className="stories-page">
       <ImageContent
         image={{
           mobile: teaserStoryData.image.mobile,

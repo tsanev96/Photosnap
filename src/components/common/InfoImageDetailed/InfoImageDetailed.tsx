@@ -1,21 +1,12 @@
 import React, { FC } from "react";
-import { ImageDetails } from "../../../types/interfaces/imageDetails";
+import { TeaserStory } from "../../../types/interfaces/teaserStory";
+import { ThemeVariants } from "../../../types/interfaces/theme";
 import { ButtonArrow } from "../ButtonArrow/ButtonArrow";
 import { Copy } from "../Copy/Copy";
 import { Headline } from "../Headline/Headline";
 import "./_info-image-detailed.scss";
 
-interface PropsInfoImageDetailed {
-  smallHeadline: string;
-  headline: string;
-  imageTakenInfo: {
-    data: string;
-    by: string;
-  };
-  description: string;
-  image: ImageDetails;
-  theme?: "dark" | "light";
-}
+type PropsInfoImageDetailed = TeaserStory & ThemeVariants;
 
 export const InfoImageDetailed: FC<PropsInfoImageDetailed> = ({
   smallHeadline,

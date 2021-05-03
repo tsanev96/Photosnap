@@ -1,10 +1,12 @@
+import { Story } from "../../types/interfaces/story";
+import { TeaserStory } from "../../types/interfaces/teaserStory";
 import { importAll } from "../../utils/imagesImport";
 
 export const storyImageMobile = importAll(
   require.context("../../images/stories/mobile", false, /\.(png|jpe?g|svg)$/)
 );
 
-export const teaserStoryData = {
+export const teaserStoryData: TeaserStory = {
   smallHeadline: "LAST MONTH’S FEATURED STORY",
   headline: "HAZY FULL MOON OF APPALACHIA",
   imageTakenInfo: {
@@ -21,7 +23,7 @@ export const teaserStoryData = {
   },
 };
 
-export const storiesData = [
+export const storiesData: Story[] = [
   {
     headline: "The Mountains",
     copy: "by John Appleseed",
