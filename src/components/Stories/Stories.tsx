@@ -30,7 +30,6 @@ export const Stories = () => {
           }}
         />
       </ImageContent>
-
       <StoriesContainer>
         {storiesData.map(({ headline, copy, image }) => (
           <Story
@@ -44,7 +43,6 @@ export const Stories = () => {
             }}
           />
         ))}
-        some
       </StoriesContainer>
     </div>
   );

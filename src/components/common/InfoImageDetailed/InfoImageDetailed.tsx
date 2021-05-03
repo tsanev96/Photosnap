@@ -25,28 +25,30 @@ export const InfoImageDetailed: FC<PropsInfoImageDetailed> = ({
   image,
   theme = "light",
 }) => {
+  const classNameWrapper = "info-image-detailed";
+
   return (
     <div
-      className={`info-image-detailed info-image-detailed__${
+      className={`${classNameWrapper} ${classNameWrapper}__${
         theme === "dark" ? "dark" : "light"
       }`}
     >
       <Copy theme={theme} text={smallHeadline} isOpacity size="sm" />
       <Headline theme={theme} level="h2" text={headline} />
-      <div className="info-image-detailed__author">
+      <div className={`${classNameWrapper}__author`}>
         <Copy theme={theme} text={imageTakenInfo.data} isOpacity size="sm" />
         <Copy theme={theme} text={imageTakenInfo.by} isOpacity size="sm" />
       </div>
       <Copy theme={theme} text={description} isOpacity />
       <ButtonArrow theme={theme} text="READ THE STORY" />
-      <div className="info-image-detailed__img-container">
+      <div className={`${classNameWrapper}__img-container`}>
         <img
-          className="info-image-detailed__tablet"
+          className={`${classNameWrapper}__tablet`}
           src={image.tablet}
           alt={image.alt}
         />
         <img
-          className="info-image-detailed__desktop"
+          className={`${classNameWrapper}__desktop`}
           src={image.desktop}
           alt={image.alt}
         />
