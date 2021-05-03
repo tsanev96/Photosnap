@@ -1,10 +1,8 @@
 import React, { FC } from "react";
-import { ImageDetails } from "../../../types/interfaces/imageDetails";
 import { ButtonArrow } from "../ButtonArrow/ButtonArrow";
 import { ColorfulRectangle } from "../ColorfulRectangle/ColorfulRectangle";
 import { Copy } from "../Copy/Copy";
 import { Headline } from "../Headline/Headline";
-import { Image } from "../Image/Image";
 import "./_info-text.scss";
 
 interface PropsInfoText {
