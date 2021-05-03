@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: 1fr;
 
-  @include breakpoint("mobileMin") {
+  @include breakpoint("phablet") {
     grid-template-columns: 1fr 1fr;
   }
 
