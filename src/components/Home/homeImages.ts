@@ -19,8 +19,6 @@ const storyImagesDesktop = importAll(
   require.context("../../images/stories/desktop", false, /\.(png|jpe?g|svg)$/)
 );
 
-console.log(storyImagesMobile);
-
 export const contentImages = {
   image1: {
     mobile: homeImagesMobile[0].default,

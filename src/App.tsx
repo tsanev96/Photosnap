@@ -5,6 +5,7 @@ import { Footer } from "./components/Footer/Footer";
 import "../src/styles/theme.scss";
 import { Features } from "./components/Features/Features";
 import { Stories } from "./components/Stories/Stories";
+import { Pricing } from "./components/Pricing/Pricing";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/" exact component={Home} />
         <Route path="/features" component={Features} />
         <Route path="/stories" component={Stories} />
+        <Route path="/pricing" component={Pricing} />
       </Switch>
       <Footer />
     </BrowserRouter>

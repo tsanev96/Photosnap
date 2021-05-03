@@ -1,0 +1,37 @@
+@import "../../../styles/mixins/mixins";
+@import "../../../styles/functions/pixel-to-rem";
+
+.action-box {
+  margin: rem(0) rem(30) rem(24);
+  padding: rem(56) rem(30) rem(40);
+  text-align: center;
+
+  &__dark {
+    background: var(--lighter-gray-color);
+  }
+
+  &__light {
+    background: var(--primary-color);
+  }
+
+  &__headline {
+    margin-bottom: rem(18);
+  }
+
+  &__description {
+    margin-bottom: rem(40);
+  }
+
+  &__price {
+    font-size: rem(40) !important;
+    letter-spacing: rem(4);
+  }
+
+  &__payment-time {
+    margin-bottom: rem(40);
+  }
+
+  &__button {
+    width: 100%;
+  }
+}
