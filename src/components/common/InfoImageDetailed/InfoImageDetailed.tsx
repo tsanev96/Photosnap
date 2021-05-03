@@ -39,6 +39,18 @@ export const InfoImageDetailed: FC<PropsInfoImageDetailed> = ({
       </div>
       <Copy theme={theme} text={description} isOpacity />
       <ButtonArrow theme={theme} text="READ THE STORY" />
+      <div className="info-image-detailed__img-container">
+        <img
+          className="info-image-detailed__tablet"
+          src={image.tablet}
+          alt={image.alt}
+        />
+        <img
+          className="info-image-detailed__desktop"
+          src={image.desktop}
+          alt={image.alt}
+        />
+      </div>
     </div>
   );
 };

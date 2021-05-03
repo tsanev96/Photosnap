@@ -4,13 +4,11 @@ import { ImageContent } from "../common/ImageText/ImageContent";
 import { InfoImageDetailed } from "../common/InfoImageDetailed/InfoImageDetailed";
 import { Stories as StoriesContainer } from "../common/Stories/Stories";
 import { storiesData, teaserStoryData } from "./storiesData";
+import "./_stories.scss";
 
 export const Stories = () => {
   return (
-    <div>
-      {/* {Object.values(storyImageMobile).map((el) => (
-        <img src={el.default} alt="" />
-      ))} */}
+    <div className="stories-wrapper">
       <ImageContent
         image={{
           mobile: teaserStoryData.image.mobile,
