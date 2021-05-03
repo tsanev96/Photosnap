@@ -1,0 +1,47 @@
+@import "../../../styles/mixins/mixins";
+@import "../../../styles/functions/pixel-to-rem";
+
+.toggle-button {
+  position: relative;
+  margin: 10px;
+  display: block;
+  width: rem(60);
+  height: rem(30);
+
+  input {
+    opacity: 0;
+  }
+
+  input:checked + &__slider::before {
+    transform: translate(25px, -50%);
+    background: var(--light-gray-color);
+  }
+
+  input:checked + &__slider {
+    background: var(--primary-color);
+  }
+
+  &__slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--light-gray-color);
+    border-radius: rem(30);
+    transition: 0.5s;
+  }
+
+  &__slider::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: rem(25);
+    height: rem(25);
+    background: var(--primary-color);
+    border-radius: 50%;
+    transition: 0.5s;
+  }
+}

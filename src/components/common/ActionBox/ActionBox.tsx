@@ -1,22 +1,11 @@
 import React, { FC } from "react";
+import { PricingPlan } from "../../../types/interfaces/pricingPlan";
 import { Button } from "../Button/Button";
 import { Copy } from "../Copy/Copy";
 import { Headline } from "../Headline/Headline";
 import "./_action-box.scss";
 
-interface PropsActionBox {
-  headline: string;
-  description: string;
-  button: {
-    text: string;
-  };
-  price: {
-    monthly: string;
-    yearly: string;
-  };
-  theme?: "dark" | "light";
-}
-export const ActionBox: FC<PropsActionBox> = ({
+export const ActionBox: FC<PricingPlan> = ({
   headline,
   description,
   button,
@@ -51,11 +40,13 @@ export const ActionBox: FC<PropsActionBox> = ({
         theme={theme}
         text="per month"
       />
-      <Button
-        className={`${classNameWrapper}__button`}
-        theme={theme === "light" ? "dark" : "light"}
-        text={button.text}
-      />
+      {button && (
+        <Button
+          className={`${classNameWrapper}__button`}
+          theme={theme === "light" ? "dark" : "light"}
+          text={button.text}
+        />
+      )}
     </div>
   );
 };

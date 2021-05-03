@@ -2,6 +2,7 @@ import { ImageContentCols } from "../../types/interfaces/imageContentCols";
 import heroImageMobile from "../../images/pricing/mobile/hero.jpg";
 import heroImageTablet from "../../images/pricing/tablet/hero.jpg";
 import heroImageDesktop from "../../images/pricing/desktop/hero.jpg";
+import { PricingPlan } from "../../types/interfaces/pricingPlan";
 
 export const imageTextDataOne: ImageContentCols = {
   image: {
@@ -17,7 +18,7 @@ export const imageTextDataOne: ImageContentCols = {
   isRowReversed: true,
 };
 
-export const pricingPlan = [
+export const pricingPlans: PricingPlan[] = [
   {
     headline: "Basic",
     description:
