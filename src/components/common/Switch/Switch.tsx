@@ -5,9 +5,10 @@ import "./_switch.scss";
 export const Switch = () => {
   const [isToggleOn, setIsToggleOn] = useState(false);
 
-  const switchPlans = (toggled: boolean) => setIsToggleOn(toggled);
+  const onToggleChange = () => setIsToggleOn((toggle) => !toggle);
 
   const classNameRoot = "switch";
+
   return (
     <div className={classNameRoot}>
       <span
@@ -15,7 +16,7 @@ export const Switch = () => {
       >
         Monthly
       </span>
-      <ToggleButton onChange={switchPlans} />
+      <ToggleButton onChange={onToggleChange} />
       <span
         className={`${classNameRoot}__right ${isToggleOn ? "selected" : ""}`}
       >
