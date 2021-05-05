@@ -3,10 +3,10 @@
 
 .toggle-button {
   position: relative;
-  margin: 10px;
   display: block;
   width: rem(60);
   height: rem(30);
+  cursor: pointer;
 
   input {
     opacity: 0;

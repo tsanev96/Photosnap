@@ -2,7 +2,7 @@ import React from "react";
 import { ActionBox } from "../common/ActionBox/ActionBox";
 import { ImageContent } from "../common/ImageText/ImageContent";
 import { InfoText } from "../common/InfoText/InfoText";
-import { ToggleButton } from "../common/ToggleButton/ToggleButton";
+import { Switch } from "../common/Switch/Switch";
 import { imageTextDataOne, pricingPlans } from "./pricingData";
 
 export const Pricing = () => {
@@ -27,7 +27,7 @@ export const Pricing = () => {
           isOpacity
         />
       </ImageContent>
-      <ToggleButton />
+      <Switch />
       {pricingPlans.map((plan) => (
         <ActionBox
           key={plan.headline}
