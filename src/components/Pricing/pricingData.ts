@@ -23,9 +23,9 @@ export const pricingPlans: PricingPlan[] = [
     headline: "Basic",
     description:
       "Includes basic usage of our platform. Recommended for new and aspiring photographers.",
-    price: {
+    payment: {
       monthly: "$19.00",
-      yearly: "$19.00",
+      yearly: "$100.00",
     },
     theme: "dark",
   },
@@ -33,9 +33,9 @@ export const pricingPlans: PricingPlan[] = [
     headline: "Pro",
     description:
       "More advanced features available. Recommended for photography veterans and professionals.",
-    price: {
+    payment: {
       monthly: "$39.00",
-      yearly: "$39.00",
+      yearly: "$150.00",
     },
     theme: "light",
   },
@@ -43,9 +43,9 @@ export const pricingPlans: PricingPlan[] = [
     headline: "Business",
     description:
       "Additional features available such as more detailed metrics. Recommended for business owners.",
-    price: {
+    payment: {
       monthly: "$99.00",
-      yearly: "$99.00",
+      yearly: "$250.00",
     },
     theme: "dark",
   },

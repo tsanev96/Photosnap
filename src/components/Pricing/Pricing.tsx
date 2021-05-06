@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ActionBox } from "../common/ActionBox/ActionBox";
 import { ImageContent } from "../common/ImageText/ImageContent";
 import { InfoText } from "../common/InfoText/InfoText";
@@ -7,6 +7,18 @@ import { imageTextDataOne, pricingPlans } from "./pricingData";
 import "./_pricing.scss";
 
 export const Pricing = () => {
+  const [isMonthlyPayment, setIsMonthlyPayment] = useState(true);
+  const [isToggleOn, setIsToggleOn] = useState(false);
+
+  const onToggleChange = () => {
+    setIsToggleOn((toggle) => !toggle);
+  };
+
+  useEffect(() => {
+    if (isToggleOn) setIsMonthlyPayment(false);
+    else setIsMonthlyPayment(true);
+  });
+
   return (
     <div className="pricing-page">
       <ImageContent
@@ -28,7 +40,7 @@ export const Pricing = () => {
           isOpacity
         />
       </ImageContent>
-      <Switch />
+      <Switch isToggleOn={isToggleOn} onChange={onToggleChange} />
       <div className="pricing-plans">
         {pricingPlans.map((plan) => (
           <ActionBox
@@ -36,8 +48,9 @@ export const Pricing = () => {
             headline={plan.headline}
             description={plan.description}
             button={{ text: "PICK PLAN" }}
-            price={plan.price}
+            payment={plan.payment}
             theme={plan.theme}
+            isMonthlyPayment={isMonthlyPayment}
           />
         ))}
       </div>

@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { ToggleButton } from "../ToggleButton/ToggleButton";
 import "./_switch.scss";
 
-export const Switch = () => {
-  const [isToggleOn, setIsToggleOn] = useState(false);
+interface PropsSwitch {
+  isToggleOn: boolean;
+  onChange: () => void;
+}
 
-  const onToggleChange = () => setIsToggleOn((toggle) => !toggle);
-
+export const Switch: React.FC<PropsSwitch> = ({ isToggleOn, onChange }) => {
   const classNameRoot = "switch";
 
   return (
@@ -16,7 +17,7 @@ export const Switch = () => {
       >
         Monthly
       </span>
-      <ToggleButton onChange={onToggleChange} />
+      <ToggleButton onChange={onChange} />
       <span
         className={`${classNameRoot}__right ${isToggleOn ? "selected" : ""}`}
       >

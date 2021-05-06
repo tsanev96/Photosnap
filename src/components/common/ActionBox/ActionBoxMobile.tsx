@@ -9,8 +9,9 @@ export const ActionBoxMobile: FC<PricingPlan> = ({
   headline,
   description,
   button,
-  price,
+  payment,
   theme,
+  isMonthlyPayment,
 }) => {
   const classNameRoot = "action-box";
   return (
@@ -34,13 +35,13 @@ export const ActionBoxMobile: FC<PricingPlan> = ({
         className={`${classNameRoot}__price`}
         theme={theme}
         level="h2"
-        text={price.monthly}
+        text={isMonthlyPayment ? payment.monthly : payment.yearly}
       />
       <Copy
         className={`${classNameRoot}__payment-time`}
         isOpacity
         theme={theme}
-        text="per month"
+        text={isMonthlyPayment ? "per month" : "per year"}
       />
       {button && (
         <Button

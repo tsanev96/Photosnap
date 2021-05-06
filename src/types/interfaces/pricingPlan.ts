@@ -1,7 +1,7 @@
 export interface PricingPlan {
   headline: string;
   description: string;
-  price: {
+  payment: {
     monthly: string;
     yearly: string;
   };
@@ -9,4 +9,5 @@ export interface PricingPlan {
   button?: {
     text: string;
   };
+  isMonthlyPayment?: boolean;
 }

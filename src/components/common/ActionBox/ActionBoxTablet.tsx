@@ -9,7 +9,8 @@ export const ActionBoxTablet: FC<PricingPlan> = ({
   headline,
   description,
   button,
-  price,
+  payment,
+  isMonthlyPayment,
   theme,
 }) => {
   const classNameRoot = "action-box";
@@ -44,13 +45,13 @@ export const ActionBoxTablet: FC<PricingPlan> = ({
           className={`${classNameRoot}__price`}
           theme={theme}
           level="h2"
-          text={price.monthly}
+          text={isMonthlyPayment ? payment.monthly : payment.yearly}
         />
         <Copy
           className={`${classNameRoot}__payment-time`}
           isOpacity
           theme={theme}
-          text="per month"
+          text={isMonthlyPayment ? "per month" : "per year"}
         />
       </div>
     </>

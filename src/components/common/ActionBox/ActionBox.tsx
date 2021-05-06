@@ -1,8 +1,5 @@
 import React, { FC } from "react";
 import { PricingPlan } from "../../../types/interfaces/pricingPlan";
-import { Button } from "../Button/Button";
-import { Copy } from "../Copy/Copy";
-import { Headline } from "../Headline/Headline";
 import { ActionBoxMobile } from "./ActionBoxMobile";
 import { ActionBoxTablet } from "./ActionBoxTablet";
 import "./_action-box.scss";
@@ -11,8 +8,9 @@ export const ActionBox: FC<PricingPlan> = ({
   headline,
   description,
   button,
-  price,
+  payment,
   theme = "dark",
+  isMonthlyPayment,
 }) => {
   const classNameRoot = "action-box";
 
@@ -23,8 +21,9 @@ export const ActionBox: FC<PricingPlan> = ({
           headline={headline}
           description={description}
           button={button}
-          price={price}
+          payment={payment}
           theme={theme}
+          isMonthlyPayment={isMonthlyPayment}
         />
       </div>
       <div className={`${classNameRoot}__tablet`}>
@@ -32,8 +31,9 @@ export const ActionBox: FC<PricingPlan> = ({
           headline={headline}
           description={description}
           button={button}
-          price={price}
+          payment={payment}
           theme={theme}
+          isMonthlyPayment={isMonthlyPayment}
         />
       </div>
     </div>
