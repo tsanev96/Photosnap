@@ -20,7 +20,7 @@ export const Pricing = () => {
   useEffect(() => {
     if (isToggleOn) setIsMonthlyPayment(false);
     else setIsMonthlyPayment(true);
-  });
+  }, [isToggleOn]);
 
   return (
     <div className="pricing-page">

@@ -14,20 +14,20 @@ export const FeaturePlansMobile: React.FC<FeaturePlansDetails> = ({
 
       <div className="feature-plans__features">
         {plans.map((plan) => (
-          <div>
+          <div key={plan.feature}>
             <Headline level="h5" text={plan.feature} />
             <div className="feature-plans__plans">
               <div>
                 <Copy text="BASIC" isOpacity />
-                <div>{plan.basic && <FaCheck />}</div>
+                {plan.basic && <FaCheck />}
               </div>
               <div>
                 <Copy text="PRO" isOpacity />
-                <div>{plan.pro && <FaCheck />}</div>
+                {plan.pro && <FaCheck />}
               </div>
               <div>
                 <Copy text="BUSINESS" isOpacity />
-                <div>{plan.business && <FaCheck />}</div>
+                {plan.business && <FaCheck />}
               </div>
             </div>
           </div>

@@ -20,7 +20,7 @@ export const FeaturePlansTablet: FC<FeaturePlansDetails> = ({
 
       <div className="feature-plans__bottom">
         {plans.map((plan) => (
-          <div className="feature-plans__feature">
+          <div key={plan.feature} className="feature-plans__feature">
             <Headline level="h5" text={plan.feature} />
             <div className="icon">{plan.basic && <FaCheck />}</div>
             <div className="icon">{plan.pro && <FaCheck />}</div>
