@@ -2,10 +2,61 @@
 @import "../../../styles/functions/pixel-to-rem";
 
 .action-box {
+  $self: &;
+  position: relative;
   margin: rem(0) rem(30) rem(24);
   padding: rem(56) rem(30) rem(40);
   text-align: center;
 
+  &__mobile {
+    @include breakpoint("phablet") {
+      display: none;
+    }
+  }
+
+  &__light {
+    #{$self} {
+      &__mobile {
+        #{$self} {
+          &__rect {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+          }
+        }
+      }
+
+      &__tablet {
+        #{$self} {
+          &__rect {
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__tablet {
+    display: none;
+    @include breakpoint("phablet") {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #{$self} {
+      &__left-side,
+      &__right-side {
+        flex: 1;
+      }
+
+      &__left-side {
+        text-align: left;
+      }
+    }
+  }
   &__dark {
     background: var(--lighter-gray-color);
   }

@@ -1,6 +1,12 @@
-import React from "react";
+import React, { FC } from "react";
 import "./_colorful-rectangle.scss";
 
-export const ColorfulRectangle = () => {
-  return <div className="colorful-rectangle" />;
+interface PropsColorfulRectangle {
+  className?: string;
+}
+
+export const ColorfulRectangle: FC<PropsColorfulRectangle> = ({
+  className = "",
+}) => {
+  return <div className={`${className} colorful-rectangle`} />;
 };
