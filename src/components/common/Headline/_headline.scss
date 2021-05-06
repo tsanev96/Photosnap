@@ -36,4 +36,8 @@
   &__light {
     color: var(--white-color);
   }
+
+  &.centered {
+    text-align: center;
+  }
 }

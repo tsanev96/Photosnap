@@ -8,6 +8,7 @@ interface PropsButton {
   theme?: "dark" | "light";
   type?: "primary" | "secondary";
   onClick?: () => void;
+  className?: string;
 }
 
 export const Button: FC<PropsButton> = ({
@@ -16,8 +17,9 @@ export const Button: FC<PropsButton> = ({
   pathname,
   type = "primary",
   onClick,
+  className = "",
 }) => {
-  const classes = `button button__${theme} button__${type}`;
+  const classes = `button button__${theme} button__${type} ${className}`;
 
   return (
     <>

@@ -6,6 +6,7 @@ interface PropsCopy {
   theme?: "dark" | "light";
   isOpacity?: boolean;
   size?: "sm" | "lg" | "xl";
+  className?: string;
 }
 
 export const Copy: FC<PropsCopy> = ({
@@ -13,10 +14,11 @@ export const Copy: FC<PropsCopy> = ({
   theme = "dark",
   isOpacity = false,
   size = "lg",
+  className = "",
 }) => {
   return (
     <p
-      className={`copy copy__${theme} copy__opacity-${isOpacity} copy__size-${size}`}
+      className={`copy copy__${theme} copy__opacity-${isOpacity} copy__size-${size} ${className}`}
     >
       {text}
     </p>

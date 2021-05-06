@@ -1,0 +1,103 @@
+@import "../../../styles/mixins/mixins";
+@import "../../../styles/functions/pixel-to-rem";
+
+.action-box {
+  $self: &;
+  position: relative;
+  margin: rem(0) rem(30) rem(24);
+  padding: rem(56) rem(30) rem(40);
+  text-align: center;
+
+  &__mobile {
+    @include breakpoint("phablet") {
+      display: none;
+    }
+
+    @include breakpoint("laptop") {
+      display: block;
+    }
+  }
+
+  &__tablet {
+    display: none;
+    @include breakpoint("phablet") {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include breakpoint("laptop") {
+      display: none;
+    }
+
+    #{$self} {
+      &__left-side,
+      &__right-side {
+        flex: 1;
+      }
+
+      &__left-side {
+        text-align: left;
+      }
+    }
+  }
+
+  &__dark {
+    background: var(--lighter-gray-color);
+    @include breakpoint("laptop") {
+      margin: rem(30) 0;
+    }
+  }
+
+  &__light {
+    background: var(--primary-color);
+
+    @include breakpoint("laptop") {
+      padding: rem(90) rem(40);
+    }
+
+    #{$self} {
+      &__mobile {
+        #{$self} {
+          &__rect {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: rem(6);
+          }
+        }
+      }
+
+      &__tablet {
+        #{$self} {
+          &__rect {
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__headline {
+    margin-bottom: rem(18);
+  }
+
+  &__description {
+    margin-bottom: rem(40);
+  }
+
+  &__price {
+    font-size: rem(40) !important;
+    letter-spacing: rem(4);
+  }
+
+  &__payment-time {
+    margin-bottom: rem(40);
+  }
+
+  &__button {
+    width: 100%;
+  }
+}
