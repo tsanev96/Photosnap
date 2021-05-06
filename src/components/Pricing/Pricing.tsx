@@ -4,6 +4,7 @@ import { ImageContent } from "../common/ImageText/ImageContent";
 import { InfoText } from "../common/InfoText/InfoText";
 import { Switch } from "../common/Switch/Switch";
 import { imageTextDataOne, pricingPlans } from "./pricingData";
+import "./_pricing.scss";
 
 export const Pricing = () => {
   return (
@@ -28,16 +29,18 @@ export const Pricing = () => {
         />
       </ImageContent>
       <Switch />
-      {pricingPlans.map((plan) => (
-        <ActionBox
-          key={plan.headline}
-          headline={plan.headline}
-          description={plan.description}
-          button={{ text: "PICK PLAN" }}
-          price={plan.price}
-          theme={plan.theme}
-        />
-      ))}
+      <div className="pricing-plans">
+        {pricingPlans.map((plan) => (
+          <ActionBox
+            key={plan.headline}
+            headline={plan.headline}
+            description={plan.description}
+            button={{ text: "PICK PLAN" }}
+            price={plan.price}
+            theme={plan.theme}
+          />
+        ))}
+      </div>
     </div>
   );
 };

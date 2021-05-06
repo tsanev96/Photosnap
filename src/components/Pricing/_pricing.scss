@@ -1,0 +1,10 @@
+@import "../../styles/mixins/mixins";
+@import "../../styles/functions/pixel-to-rem";
+
+.pricing-plans {
+  @include breakpoint("laptop") {
+    margin: rem(0) rem(165) rem(160);
+    display: flex;
+    align-items: center;
+  }
+}
