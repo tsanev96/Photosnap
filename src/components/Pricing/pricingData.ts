@@ -3,6 +3,7 @@ import heroImageMobile from "../../images/pricing/mobile/hero.jpg";
 import heroImageTablet from "../../images/pricing/tablet/hero.jpg";
 import heroImageDesktop from "../../images/pricing/desktop/hero.jpg";
 import { PricingPlan } from "../../types/interfaces/pricingPlan";
+import { FeaturePlansDetails } from "../../types/interfaces/featurePlans";
 
 export const imageTextDataOne: ImageContentCols = {
   image: {
@@ -50,3 +51,57 @@ export const pricingPlans: PricingPlan[] = [
     theme: "dark",
   },
 ];
+
+export const planFeatures: FeaturePlansDetails = {
+  headline: "THE FEATURES",
+  plans: [
+    {
+      feature: "UNLIMITED STORY POSTING",
+      basic: true,
+      pro: true,
+      business: true,
+    },
+    {
+      feature: "UNLIMITED PHOTO UPLOAD",
+      basic: true,
+      pro: true,
+      business: true,
+    },
+    {
+      feature: "EMBEDDING CUSTOM CONTENT",
+      basic: false,
+      pro: true,
+      business: true,
+    },
+    {
+      feature: "CUSTOMIZE METADATA",
+      basic: false,
+      pro: true,
+      business: true,
+    },
+    {
+      feature: "ADVANCED METRICS",
+      basic: false,
+      pro: false,
+      business: true,
+    },
+    {
+      feature: "PHOTO DOWNLOADS",
+      basic: false,
+      pro: false,
+      business: true,
+    },
+    {
+      feature: "SEARCH ENGINE INDEXING",
+      basic: false,
+      pro: false,
+      business: true,
+    },
+    {
+      feature: "CUSTOM ANALYTICS",
+      basic: false,
+      pro: false,
+      business: true,
+    },
+  ],
+};

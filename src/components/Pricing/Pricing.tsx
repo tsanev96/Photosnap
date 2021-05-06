@@ -3,7 +3,8 @@ import { ActionBox } from "../common/ActionBox/ActionBox";
 import { ImageContent } from "../common/ImageText/ImageContent";
 import { InfoText } from "../common/InfoText/InfoText";
 import { Switch } from "../common/Switch/Switch";
-import { imageTextDataOne, pricingPlans } from "./pricingData";
+import { FeaturePlans } from "../FeaturePlans/FeaturePlans";
+import { imageTextDataOne, pricingPlans, planFeatures } from "./pricingData";
 import "./_pricing.scss";
 
 export const Pricing = () => {
@@ -54,6 +55,10 @@ export const Pricing = () => {
           />
         ))}
       </div>
+      <FeaturePlans
+        headline={planFeatures.headline}
+        plans={planFeatures.plans}
+      />
     </div>
   );
 };
