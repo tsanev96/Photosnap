@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import { ActionBox } from "../common/ActionBox/ActionBox";
 import { ImageContent } from "../common/ImageText/ImageContent";
 import { InfoText } from "../common/InfoText/InfoText";
+import { InfoTextImage } from "../common/InfoTextImage/InfoTextImage";
 import { Switch } from "../common/Switch/Switch";
 import { FeaturePlans } from "../FeaturePlans/FeaturePlans";
+import { imageInfoData } from "../Features/featuresData";
 import { imageTextDataOne, pricingPlans, planFeatures } from "./pricingData";
 import "./_pricing.scss";
 
@@ -58,6 +60,17 @@ export const Pricing = () => {
       <FeaturePlans
         headline={planFeatures.headline}
         plans={planFeatures.plans}
+      />
+      <InfoTextImage
+        headline={imageInfoData.headline}
+        theme={imageInfoData.theme}
+        image={{
+          mobile: imageInfoData.image.mobile,
+          tablet: imageInfoData.image.tablet,
+          desktop: imageInfoData.image.desktop,
+          alt: imageInfoData.image.alt,
+        }}
+        button={{ text: imageInfoData.button.text }}
       />
     </div>
   );

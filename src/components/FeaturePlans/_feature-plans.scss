@@ -33,4 +33,63 @@
       }
     }
   }
+
+  &__mobile {
+    @include breakpoint("phablet") {
+      display: none;
+    }
+  }
+
+  &__tablet {
+    margin: rem(0) rem(30) rem(120);
+    display: none;
+
+    & > .headline {
+      margin-bottom: rem(55);
+    }
+    @include breakpoint("phablet") {
+      display: block;
+    }
+
+    @include breakpoint("laptop") {
+      margin-left: auto;
+      margin-right: auto;
+      width: rem(730);
+    }
+    #{$self} {
+      &__upper,
+      &__bottom > * {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        align-items: center;
+
+        .headline {
+          font-size: rem(12);
+        }
+      }
+
+      &__upper {
+        margin-bottom: rem(20);
+        padding-bottom: rem(20);
+        border-bottom: rem(1) solid var(--primary-color);
+
+        .copy {
+          text-align: center;
+          font-weight: bold;
+        }
+      }
+
+      &__bottom {
+        .icon {
+          text-align: center;
+        }
+      }
+
+      &__bottom > * {
+        margin-bottom: rem(20);
+        padding-bottom: rem(20);
+        border-bottom: rem(1) solid var(--light-gray-color);
+      }
+    }
+  }
 }
