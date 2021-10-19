@@ -1,4 +1,4 @@
-HOSTED ON: https://hardcore-villani-1999ab.netlify.app/stories
+HOSTED ON: https://hardcore-villani-1999ab.netlify.app
 
 # Getting Started with Create React App
 
